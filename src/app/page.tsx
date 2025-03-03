@@ -1,6 +1,9 @@
-import Image from "next/image";
-import Logo from "../../public/logo.png";
+"use client";
+// import Image from "next/image";
+// import Logo from "../../public/logo.png";
 import { Poppins } from "next/font/google"; 
+import { motion } from "framer-motion";
+
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -12,39 +15,79 @@ export default function Home() {
   return (
     <div className={`${poppins.className}`}>
      
-         <div className="bg-blue-500 h-14 flex justify-between items-center pl-4 pr-18">
-              <div>
-                <p className="text-white">Notice: Upcoming classes will be running after Dashin</p>
-              </div>
-               <ul className="flex items-center text-white gap-4 cursor-pointer">
-                <li>Login</li>
-                <li>Register</li>
-                <li ><button className="px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md transition-all duration-300 ease-in-out hover:bg-blue-700 hover:shadow-lg active:scale-95 cursor-pointer">Mock Test</button></li>
-               </ul>
-         </div>
-         <div className="flex items-center justify-between px-22">
-           <div className="h-16 w-16">
-            <Image src={Logo} alt="logo" />
+     <motion.div
+      className="bg-blue-500 px-6 py-2 min-h-16 sm:flex items-center justify-between"
+      initial={{ opacity: 0, y: -20 }} // Initial state
+      animate={{ opacity: 1, y: 0 }}    // Final state (after animation)
+      transition={{ duration: 0.6 }}    // Duration of the animation
+    >
+      <motion.p
+        className="text-white"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.2 }} // Delay the text animation a bit
+      >
+        Notice: Upcoming classes will be running after Dashin
+      </motion.p>
+
+      <motion.ul
+        className="flex items-center text-white gap-4 cursor-pointer"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.4 }} // Delay the ul animation a bit more
+      >
+        <motion.li
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          Login
+        </motion.li>
+        <motion.li
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+        >
+          Register
+        </motion.li>
+        <motion.li
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1 }}
+        >
+          <motion.button
+            className="px-3 py-2 sm:px-6 bg-blue-600 text-white border border-transparent rounded-lg shadow-md transition-all duration-300 ease-in-out hover:bg-white hover:text-blue-600 hover:border-white hover:shadow-lg active:scale-95 cursor-pointer"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 1.2 }}
+          >
+            Mock Test
+          </motion.button>
+        </motion.li>
+      </motion.ul>
+    </motion.div>
+         <div className="flex items-center justify-center px-22">
+          
+           <div >
+           <ul className="flex gap-4 cursor-pointer pt-4">
+  {["Home", "Course", "Blog", "FAQ", "Support"].map((item, index) => (
+    <motion.li
+      key={index}
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className="px-4 py-2 rounded-lg text-blue-600 bg-transparent transition-all duration-300 ease-in-out 
+                 hover:bg-blue-600 hover:text-white hover:shadow-lg"
+    >
+      {item}
+    </motion.li>
+  ))}
+</ul>
+
            </div>
-           <div>
-              <ul className="flex gap-4 cursor-pointer">
-                <li>Home</li>
-                <li>Courses</li>
-               <li>Blog</li>
-                <li>FAQ</li>
-                <li>Support</li>
-              </ul>
-           </div>
          </div>
-         <div className="bg-gray-200 h-96 mt-4">
-            <div></div>
-         </div>
-         <div>
-             <h1>B.E Coaching Classes</h1>
-              <div>
-                <div></div>
-              </div>
-         </div>
+         
     </div>
+    
   );
 }
