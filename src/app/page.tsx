@@ -22,7 +22,7 @@ export default function Home() {
                 <li ><button className="px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md transition-all duration-300 ease-in-out hover:bg-blue-700 hover:shadow-lg active:scale-95 cursor-pointer">Mock Test</button></li>
                </ul>
          </div>
-         <div className="flex items-center justify-between px-9">
+         <div className="flex items-center justify-between px-22">
            <div className="h-16 w-16">
             <Image src={Logo} alt="logo" />
            </div>
