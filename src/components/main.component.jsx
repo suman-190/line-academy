@@ -15,6 +15,28 @@ const Main = () => {
 
     const [isClient, setIsClient] = useState(false);
 
+    const [textIndex, setTextIndex] = useState(0);
+  const textArray = [
+    "Industry-Focused Training: Line Academy offers cutting-edge training programs that are tailored to meet the needs of the ever-evolving industry. Our courses equip you with the skills and knowledge needed for career advancement.",
+    "Engineering License Preparation: We provide expert coaching for engineering license exams, ensuring you're fully prepared to succeed. Our instructors are highly experienced and dedicated to your success.",
+    "Coaching Classes: Line Academy offers coaching classes in various subjects. Our instructors use innovative methods to ensure that you gain a thorough understanding of the topics.",
+    "MSc Entrance Preparation: We prepare students for MSc entrance exams with a robust curriculum and personalized guidance. Our focus is on helping you achieve the best possible score.",
+    "Lok Sewa Classes: Our Lok Sewa preparation classes are designed to help you pass government exams with confidence. We offer guidance, mock tests, and strategic tips for success.",
+  ];
+
+  useEffect(() => {
+    const typingInterval = setInterval(() => {
+      setTextIndex((prevIndex) => {
+        if (prevIndex < textArray.length - 1) {
+          return prevIndex + 1;
+        }
+        return prevIndex; // Stop at the last index
+      });
+    }, 5000); // Change text every 5 seconds (adjustable)
+
+    return () => clearInterval(typingInterval);
+  }, []);
+
   useEffect(() => {
     // This will make sure that the code runs only on the client-side
     setIsClient(true);
@@ -25,8 +47,9 @@ const Main = () => {
       <motion.h1
         className="text-[#004aad] text-3xl font-bold mb-6"
         initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: false }}
+    transition={{ duration: 0.6 }}
       >
         B.E Coaching Classes
       </motion.h1>
@@ -48,8 +71,9 @@ const Main = () => {
       <motion.h1
         className="text-[#004aad] text-3xl font-bold mb-6 mt-20"
         initial={{ opacity: 0, y: -20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: false }}
+    transition={{ duration: 0.6 }}
       >
         NEC License Preparation Classes
       </motion.h1>
@@ -60,7 +84,7 @@ const Main = () => {
             key={index}
             initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50, scale: 0.8 }}
             animate={isInView ? { opacity: 1, x: 0, scale: 1 } : {}}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
+            transition={{ duration: 0, delay: index * 0.1 }}
             whileHover={{ scale: 1.1, rotate: 2 }}
             className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer transition duration-300 hover:shadow-[0px_4px_15px_rgba(255,215,0,0.6)]"
           >
@@ -71,9 +95,10 @@ const Main = () => {
 
       <motion.h1
         className="text-[#004aad] text-3xl font-bold mb-6 mt-20"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={isInView ? { opacity: 1, scale: 1 } : {}}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        initial={{ opacity: 0, y: -20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: false }}
+    transition={{ duration: 0.6 }}
       >
         Training
       </motion.h1>
@@ -103,8 +128,196 @@ const Main = () => {
         ))}
       </div>
      
+      <section className="mt-14 relative py-16 bg-gradient-to-r from-blue-500 to-blue-900 text-white rounded-2xl">
+      <div className="container mx-auto px-6">
+        <motion.h2
+          className="text-4xl font-bold mb-6 text-center"
+          initial={{ opacity: 0, y: -20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: false }}
+    transition={{ duration: 0.6 }}
+        >
+          Our Strength, Our Assets
+        </motion.h2>
+
+        <motion.div
+          className="bg-white p-6 rounded-lg shadow-xl text-center transform transition-all duration-500"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6, duration: 0.6 }}
+        >
+          <p className="text-lg text-center text-amber-400">{textArray[textIndex]}</p>
+        </motion.div>
+      </div>
+    </section>
+    
+  
+
+<section className="mt-14">
+  <motion.h2
+    className="text-4xl font-bold mb-6 text-center text-blue-600"
+    initial={{ opacity: 0, y: -20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: false }}
+    transition={{ duration: 0.6 }}
+  >
+    Our Location
+  </motion.h2>
+
+  <div className="flex flex-wrap justify-center gap-8 items-center">
+    <div className="w-1/2">
+      <motion.p
+        className="font-bold typewriter-effect"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.6 }}
+      >
+        <span className="font-bold">Centrally Located:</span> Line Academy is situated in a prime, easily accessible area of the city, ensuring students and staff are close to key business and commercial hubs.
+      </motion.p>
+      
+      <motion.p
+        className="typewriter-effect"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        Just 200 meters from LABIM Mall, the academy offers students quick access to shopping, dining, and entertainment options.
+      </motion.p>
+
+      <motion.p
+        className="mt-2 typewriter-effect"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        <span className="font-bold">Excellent Public Transport Connectivity:</span> The academy is accessible by all major bus routes, providing students with convenient and reliable transportation options from all parts of the city.
+      </motion.p>
+
+      <motion.p
+        className="typewriter-effect"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        Ample Parking Facilities: The academy offers on-site parking, making it convenient for students and visitors who prefer to drive, ensuring a hassle-free experience for those commuting by their own vehicle.
+      </motion.p>
+    </div>
+
+    <div>
+      <iframe
+        className="rounded-2xl w-fit sm:w-xl"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/H757un6YemY?si=s1SEBcP3HfxsYqcf"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+
+
+    <section className="relative py-16 bg-gradient-to-r from-green-500 to-green-900 text-white mt-8 rounded-[0%_10%_0%_0%]">
+      <div className="container mx-auto px-6">
+        <motion.h2
+          className="text-4xl font-bold mb-6 text-center"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          What Our Students Say
+        </motion.h2>
+
+        <div className="flex flex-wrap justify-center gap-8 animate-move">
+          <motion.div
+            className="bg-white p-6 rounded-lg shadow-md w-72 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:animate-none"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <h3 className="text-2xl font-semibold mb-4">Centrally Located</h3>
+            <p className="text-gray-700">
+              Line Academy is situated in a prime, easily accessible area of the city, ensuring students and staff are close to key business and commercial hubs.
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="bg-white p-6 rounded-lg shadow-md w-72 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:animate-none"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <h3 className="text-2xl font-semibold mb-4">Just 200 meters from LABIM Mall</h3>
+            <p className="text-gray-700">
+              The academy offers students quick access to shopping, dining, and entertainment options.
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="bg-white p-6 rounded-lg shadow-md w-72 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:animate-none"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
+            <h3 className="text-2xl font-semibold mb-4">Excellent Public Transport Connectivity</h3>
+            <p className="text-gray-700">
+              The academy is accessible by all major bus routes, providing students with convenient and reliable transportation options from all parts of the city.
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="bg-white p-6 rounded-lg shadow-md w-72 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:animate-none"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+          >
+            <h3 className="text-2xl font-semibold mb-4">Ample Parking Facilities</h3>
+            <p className="text-gray-700">
+              The academy offers on-site parking, making it convenient for students and visitors who prefer to drive, ensuring a hassle-free experience for those commuting by their own vehicle.
+            </p>
+          </motion.div>
+        </div>
+      </div>
+
+      <style jsx>{`
+        .animate-move {
+          animation: move 10s linear infinite;
+        }
+
+        @keyframes move {
+          0% {
+            transform: translateX(0) translateY(0);
+          }
+          25% {
+            transform: translateX(30px) translateY(-30px);
+          }
+          50% {
+            transform: translateX(0) translateY(30px);
+          }
+          75% {
+            transform: translateX(-30px) translateY(0);
+          }
+          100% {
+            transform: translateX(0) translateY(-30px);
+          }
+        }
+
+        .hover\:animate-none:hover {
+          animation: none;
+        }
+      `}</style>
+    </section>
+     
+   
 
     </main>
+
+    
   );
 };
 
