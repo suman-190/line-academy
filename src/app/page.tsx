@@ -4,6 +4,7 @@
 import { Poppins } from "next/font/google"; 
 import Nav from "@/components/nav.component";
 import Hero from "@/components/hero.component";
+import Main from "@/components/main.component"
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -13,9 +14,10 @@ const poppins = Poppins({
 
 export default function Home() {
   return (
-    <div className={`${poppins.className}`}>
+    <div className={`${poppins.className} `}>
       <Nav />
       <Hero />
+      <Main/>
     </div>
     
   );

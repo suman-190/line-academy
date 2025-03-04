@@ -14,7 +14,7 @@ const imageVariants = (delay) => ({
 
 const Hero = () => {
   return (
-    <div className="bg-gray-300 min-h-full  sm:flex  justify-between items-center  mt-4 py-14 px-8 sm:px-24">
+    <div className="bg-gray-300 h-11/12  sm:flex  justify-between items-center  mt-4 py-14 px-8 sm:px-24">
       {/* Left Side - Heading and Text */}
       <div className="p-4 sm:p-8 w-full sm:w-1/2">
         <h1 className="font-bold text-xl  sm:text-5xl ">
@@ -43,7 +43,7 @@ const Hero = () => {
             variants={imageVariants(0.2)}
             initial="hidden"
             animate="visible"
-            className="relative w-32 h-32 sm:w-44 sm:h-40 rounded-[30%] overflow-hidden"
+            className="relative w-32 h-32 sm:w-44 sm:h-40 rounded-[25%_10%] overflow-hidden"
           >
             <Image src={HeroIcon} alt="Student 2" layout="fill" objectFit="cover" />
           </motion.div>
@@ -53,7 +53,7 @@ const Hero = () => {
             variants={imageVariants(0.3)}
             initial="hidden"
             animate="visible"
-            className="relative w-32 h-32 sm:w-44 sm:h-40 rounded-[30%] overflow-hidden"
+            className="relative w-32 h-32 sm:w-44 sm:h-40 rounded-[25%_10%] overflow-hidden"
           >
             <Image src={HeroIcon} alt="Student 3" layout="fill" objectFit="cover" />
           </motion.div>

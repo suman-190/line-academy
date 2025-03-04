@@ -6,7 +6,7 @@ const Nav = ()=>{
     return (
               <>
      <motion.div
-     className="bg-blue-500 px-6 py-2 min-h-16 w-full sm:flex items-center justify-between"
+     className="bg-[#004aad] px-6 py-2 min-h-16 w-full sm:flex items-center justify-between"
      initial={{ opacity: 0, y: -20 }} // Initial state
      animate={{ opacity: 1, y: 0 }}    // Final state (after animation)
      transition={{ duration: 0.6 }}    // Duration of the animation
