@@ -546,8 +546,8 @@ export default function CivilEngineeringPage() {
 
         {/* Right Side: Image Section */}
         <div className="relative bg-gradient-to-r from-blue-500 to-blue-300 rounded-lg p-6 flex items-center justify-center">
-          <div className="relative w-40 h-40 sm:w-48 sm:h-48 rounded-full border-4 border-white flex items-center justify-center overflow-hidden">
-            <Image src={course.img} alt={course.subject} width={192} height={192} />
+          <div className="relative w-40 h-40 sm:w-50 sm:h-50 rounded-full border-4 border-white flex items-center justify-center overflow-hidden">
+            <Image src={course.img} alt={course.subject}  className="h-full w-full" />
           </div>
           <p className="absolute bottom-4 text-white font-bold">{course.subject} </p>
         </div>

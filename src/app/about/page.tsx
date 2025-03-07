@@ -1,24 +1,37 @@
 "use client";
 import { motion } from 'framer-motion';
 
+import Image from 'next/image';
+import CEOImage from '../../../public/ceo.png';
+
 const AboutPage = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4 text-white">
       <motion.div
-        className="bg-blue-600 p-8 rounded-lg shadow-xl max-w-4xl w-full "
+        className="bg-blue-600 p-8 rounded-lg shadow-xl max-w-5xl w-full "
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <motion.h1
-          className="text-3xl font-semibold text-center text-amber-400 mb-6"
+        <motion.div
+          className="text-3xl font-semibold text-center text-amber-400 mb-6 flex flex-col items-center"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
           About Line Academy
-        </motion.h1>
+          <p className='w-64 bg-white h-0.5 mt-2 rounded-xl'></p>
+          <div className='mt-4'>
+            <Image
+              src={CEOImage}   alt="CEO" className='rounded-4xl' height={80} width={80}></Image>
+         </div>
+         <h1>ER.SUNEIL THAPA</h1>
+         <h1>CHIEF EXECUTAIVE OFFICER</h1>
+        </motion.div>
+         
+        
 
+         
         <motion.p
           className="text-lg  leading-relaxed mb-4"
           initial={{ opacity: 0, x: -50 }}
@@ -73,6 +86,9 @@ const AboutPage = () => {
           Thank you for choosing Line Academy. Together, let’s build a brighter future!
         </motion.p>
       </motion.div>
+
+      
+      
     </div>
   );
 };
