@@ -5,10 +5,21 @@ import Image from 'next/image';
 import CEOImage from '../../../public/ceo.png';
 
 const AboutPage = () => {
+  const boxVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1.5, ease: 'easeOut' } },
+  };
+
+  const listItemVariants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1, ease: 'easeOut' } },
+  };
+
   return (
+    <div>
     <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4 text-white">
       <motion.div
-        className="bg-blue-600 p-8 rounded-lg shadow-xl max-w-5xl w-full "
+        className="bg-[#004aad] p-8 rounded-lg shadow-xl max-w-5xl w-full "
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -87,8 +98,63 @@ const AboutPage = () => {
         </motion.p>
       </motion.div>
 
-      
-      
+    </div>  
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={boxVariants}
+      className="p-6 bg-white rounded-lg shadow-md hover:shadow-2xl transition-all duration-300 ease-in-out max-w-4xl mx-auto mt-8"
+    >
+      <div className="text-3xl font-semibold text-center text-[#004aad] mb-6 ">
+       <p>Our Mission</p> 
+        <div className='flex justify-between'>
+        <p className='w-64 bg-[#004aad] h-0.5 mt-2 rounded-xl'></p>
+        <p className='w-64 bg-[#004aad] h-0.5 mt-2 rounded-xl'></p>
+        </div>
+      </div>
+      <ul className="space-y-4">
+        <motion.li
+          initial="hidden"
+          animate="visible"
+          variants={listItemVariants}
+          className="text-lg text-gray-600 p-4 border-b-2 border-gray-300 hover:border-yellow-500 hover:shadow-lg hover:shadow-yellow-500 transition-all duration-300"
+        >
+          To provide comprehensive B.E. coaching classes that enhance students' understanding and mastery of engineering subjects.
+        </motion.li>
+        <motion.li
+          initial="hidden"
+          animate="visible"
+          variants={listItemVariants}
+          className="text-lg text-gray-600 p-4 border-b-2 border-gray-300 hover:border-yellow-500 hover:shadow-lg hover:shadow-yellow-500 transition-all duration-300"
+        >
+          To offer specialized preparation programs for the Nepal Engineering Council License exam, ensuring students are well-prepared for their professional certification.
+        </motion.li>
+        <motion.li
+          initial="hidden"
+          animate="visible"
+          variants={listItemVariants}
+          className="text-lg text-gray-600 p-4 border-b-2 border-gray-300 hover:border-yellow-500 hover:shadow-lg hover:shadow-yellow-500 transition-all duration-300"
+        >
+          To deliver practical and industry-relevant training for students and professionals, bridging the gap between academic learning and real-world application.
+        </motion.li>
+        <motion.li
+          initial="hidden"
+          animate="visible"
+          variants={listItemVariants}
+          className="text-lg text-gray-600 p-4 border-b-2 border-gray-300 hover:border-yellow-500 hover:shadow-lg hover:shadow-yellow-500 transition-all duration-300"
+        >
+          To foster an environment that encourages continuous learning, critical thinking, and innovation in the engineering field.
+        </motion.li>
+        <motion.li
+          initial="hidden"
+          animate="visible"
+          variants={listItemVariants}
+          className="text-lg text-gray-600 p-4 border-b-2 border-gray-300 hover:border-yellow-500 hover:shadow-lg hover:shadow-yellow-500 transition-all duration-300"
+        >
+          To support the personal and professional growth of our learners by providing resources and mentorship that align with their career goals.
+        </motion.li>
+      </ul>
+    </motion.div>
     </div>
   );
 };

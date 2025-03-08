@@ -270,7 +270,7 @@ const Main = () => {
 
 
 
-    <section className="relative py-16 bg-gradient-to-r from-green-500 to-green-900 text-white mt-8 rounded-[0%_10%_0%_0%]">
+    <section className="relative py-16 bg-gradient-to-r from-[#004aad] to-blue-400 text-white mt-8 rounded-[0%_10%_0%_0%]">
       <div className="container mx-auto px-6">
         <motion.h2
           className="text-4xl font-bold mb-6 text-center"
@@ -283,7 +283,7 @@ const Main = () => {
 
         <div className="flex flex-wrap justify-center gap-8 animate-move">
           <motion.div
-            className="bg-white p-6 rounded-lg shadow-md w-72 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:animate-none"
+            className="bg-white p-6 rounded-3xl shadow-md w-72 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:animate-none"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -295,7 +295,7 @@ const Main = () => {
           </motion.div>
 
           <motion.div
-            className="bg-white p-6 rounded-lg shadow-md w-72 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:animate-none"
+            className="bg-white p-6 rounded-3xl shadow-md w-72 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:animate-none"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -307,7 +307,7 @@ const Main = () => {
           </motion.div>
 
           <motion.div
-            className="bg-white p-6 rounded-lg shadow-md w-72 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:animate-none"
+            className="bg-white p-6 rounded-3xl shadow-md w-72 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:animate-none"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -319,7 +319,7 @@ const Main = () => {
           </motion.div>
 
           <motion.div
-            className="bg-white p-6 rounded-lg shadow-md w-72 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:animate-none"
+            className="bg-white p-6 rounded-3xl shadow-md w-72 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:animate-none"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
