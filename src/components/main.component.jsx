@@ -22,7 +22,7 @@ import Tr1 from "../../public/Training_category/Engineering training.png";
 import Tr2 from "../../public/Training_category/IT training.png";    
 import Tr3 from "../../public/Training_category/Professional training.png";
 
-import StrImage from  "../../public/image.png"
+
 
 import SarojYadav from "../../public/students/sarojYadv.jpeg"
 import RiyaBhattari from "../../public/students/RIyaBhttarai.jpeg"
