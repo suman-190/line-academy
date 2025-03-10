@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
+import { GoChevronRight } from "react-icons/go";
 
 import Logo from "../../public/Logo-white.png"
 
@@ -13,7 +14,7 @@ const Nav = () => {
 
   const categories = [
     {
-      "title": "N.E.C License",
+      "title": "N.E.C License Preparation",
       "exams": [
         { "id": "computer-engineering", "name": "Computer Engineering" },
         { "id": "civil-engineering", "name": "Civil Engineering" },
@@ -60,7 +61,7 @@ const Nav = () => {
       ]
     },
     {
-      "title": "Govt Exam",
+      "title": "Lok Sewa",
       "exams": [
         { "id": "nea-electrical-engineer-level-7", "name": "NEA - Electrical Engineer Level 7" },
         { "id": "nea-electrical-supervisor-level-5", "name": "NEA - Electrical Supervisor Level 5" },
@@ -103,7 +104,9 @@ const Nav = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
+      <Link href="/">
       <Image src={Logo} alt="Logo" width={100} height={100} />
+      </Link>
 
         <motion.ul
           className="flex items-center text-white gap-4 cursor-pointer"
@@ -177,8 +180,7 @@ const Nav = () => {
                         setOpenSubMenu(true);
                       }}
                     >
-                      {category.title} →
-                    </li>
+                      {category.title} <GoChevronRight/>                    </li>
                   ))}
                 </ul>
               </motion.div>
@@ -195,15 +197,25 @@ const Nav = () => {
                 exit={{ opacity: 0, x: -10 }}
               >
                 <ul className="grid grid-cols-2 gap-4 sm:w-xl">
-                  {categories
-                    .find((category) => category.title === selectedCategory)
-                    ?.exams.map(({name,id}) => (
-                    <Link href={`/course-details/${id}`} key={name}>
-                        <li key={name} className="p-2 hover:bg-gray-200 cursor-pointer ">
-                        {name}
-                      </li>
-                    </Link>
-                    ))}
+                <ul className="grid grid-cols-2 gap-4 sm:w-xl">
+            {categories
+              .find((category) => category.title === selectedCategory)
+              ?.exams.map(({ name, id }) => (
+                <Link
+                  href={
+                    selectedCategory === "B.E Coaching"
+                      ? `/be-coaching/${id}`
+                      : `/course-details/${id}`
+                  }
+                  key={name}
+                >
+                <li className="p-2 rounded-2xl shadow hover:shadow-xl border border-transparent hover:border-gray-300 transition-all duration-300 cursor-pointer">
+  {name}
+</li>
+
+                </Link>
+              ))}
+          </ul>
                 </ul>
               </motion.div>
             )}

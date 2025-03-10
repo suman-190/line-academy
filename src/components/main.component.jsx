@@ -22,6 +22,11 @@ import Tr1 from "../../public/Training_category/Engineering training.png";
 import Tr2 from "../../public/Training_category/IT training.png";    
 import Tr3 from "../../public/Training_category/Professional training.png";
 
+import StrImage from  "../../public/image.png"
+
+import SarojYadav from "../../public/students/sarojYadv.jpeg"
+import RiyaBhattari from "../../public/students/RIyaBhttarai.jpeg"
+import PrabeshPokharel  from "../../public/students/PrabeshPokharel.jpeg"
 
 const images = [BE1, BE2, BE3, BE4];
 const li_Images=[Li1,Li2,Li3,Li4,Li5,Li6,Li7,Li8,Li9];
@@ -88,9 +93,9 @@ const Main = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0, delay: index * 0.2 }}
             whileHover={{ scale: 1.1 }}
-            className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer transition duration-300 hover:shadow-[0px_4px_15px_rgba(255,215,0,0.6)]"
+            className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer transition duration-300 hover:shadow-[0px_4px_15px_rgba(255,215,0,0.6)] border-amber-200 p-2 border"
           >
-            <Image src={image} alt={`BE${index + 1}`} height={300} width={300} className="rounded" />
+            <Image src={image} alt={`BE${index + 1}`} height={250} width={250} className="rounded" />
           </motion.div>
         ))}
       </div>
@@ -113,9 +118,9 @@ const Main = () => {
             animate={{ opacity: 1, x: 0, scale: 1 }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
             whileHover={{ scale: 1.1, rotate: 2 }}
-            className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer transition duration-300 hover:shadow-[0px_4px_15px_rgba(255,215,0,0.6)]"
+            className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer transition duration-300 hover:shadow-[0px_4px_15px_rgba(255,215,0,0.6)] border-amber-200 p-2 border"
           >
-            <Image src={image} alt={`NEC Image ${startIndex + index + 1}`} height={300} width={300} className="rounded" />
+            <Image src={image} alt={`NEC Image ${startIndex + index + 1}`} height={250} width={250} className="rounded" />
           </motion.div>
         ))}
       </div>
@@ -169,9 +174,9 @@ const Main = () => {
               scale: 1.2, // Expand image on hover
               transition: { duration: 0.3, ease: "easeOut" },
             }}
-            className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer transition duration-300 hover:shadow-[0px_4px_20px_rgba(255,215,0,0.7)]"
+            className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer transition duration-300 hover:shadow-[0px_4px_20px_rgba(255,215,0,0.7)] border-amber-200 p-2 border"
           >
-            <Image src={image} alt={`BE${index + 1}`} height={300} width={300} className="rounded" />
+            <Image src={image} alt={`BE${index + 1}`} height={250} width={250} className="rounded" />
           </motion.div>
         ))}
       </div>
@@ -189,12 +194,13 @@ const Main = () => {
         </motion.h2>
 
         <motion.div
-          className="bg-white p-6 rounded-lg shadow-xl text-center transform transition-all duration-500"
+          className="bg-[#004aad] p-6 rounded-lg shadow-xl text-center transform transition-all duration-500"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.6 }}
         >
           <p className="text-lg text-center text-amber-400">{textArray[textIndex]}</p>
+          <Image src={StrImage } height={300} width={800} alt="image" className="relative sm:left-40"/>
         </motion.div>
       </div>
     </section>
@@ -282,6 +288,23 @@ const Main = () => {
         </motion.h2>
 
         <div className="flex flex-wrap justify-center gap-8 animate-move">
+         
+
+        <motion.div
+            className="bg-white p-6 rounded-3xl shadow-md w-72 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:animate-none"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <h3 className="text-2xl font-semibold mb-4">Centrally Located</h3>
+            <div className="flex flex-col items-center gap-1">
+            <Image src={RiyaBhattari} height={100} width={100} className="rounded-full" alt="20"></Image>
+            <p className="text-black">Riya Bhattari</p>
+            <p className="text-gray-700">
+              Line Academy is situated in a prime, easily accessible area of the city, ensuring students and staff are close to key business and commercial hubs.
+            </p>
+            </div>
+          </motion.div>
           <motion.div
             className="bg-white p-6 rounded-3xl shadow-md w-72 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:animate-none"
             initial={{ opacity: 0, x: -50 }}
@@ -289,46 +312,46 @@ const Main = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h3 className="text-2xl font-semibold mb-4">Centrally Located</h3>
+            <div className="flex flex-col items-center gap-1">
+            <Image src={RiyaBhattari} height={100} width={100} className="rounded-full" alt="20"></Image>
+            <p className="text-black">Prabesh Pokharel</p>
             <p className="text-gray-700">
               Line Academy is situated in a prime, easily accessible area of the city, ensuring students and staff are close to key business and commercial hubs.
             </p>
+            </div>
           </motion.div>
-
           <motion.div
             className="bg-white p-6 rounded-3xl shadow-md w-72 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:animate-none"
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="text-2xl font-semibold mb-4">Just 200 meters from LABIM Mall</h3>
+            <h3 className="text-2xl font-semibold mb-4">Centrally Located</h3>
+            <div className="flex flex-col items-center gap-1">
+            <Image src={PrabeshPokharel} height={100} width={100} className="rounded-full" alt="20"></Image>
+            <p className="text-black">Prabesh Pokharel</p>
             <p className="text-gray-700">
-              The academy offers students quick access to shopping, dining, and entertainment options.
+              Line Academy is situated in a prime, easily accessible area of the city, ensuring students and staff are close to key business and commercial hubs.
             </p>
+            </div>
           </motion.div>
-
           <motion.div
             className="bg-white p-6 rounded-3xl shadow-md w-72 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:animate-none"
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="text-2xl font-semibold mb-4">Excellent Public Transport Connectivity</h3>
+            <h3 className="text-2xl font-semibold mb-4">Centrally Located</h3>
+            <div className="flex flex-col items-center gap-1">
+            <Image src={SarojYadav} height={100} width={100} className="rounded-full" alt="20"></Image>
+            <p className="text-black">Saroj Yadav</p>
             <p className="text-gray-700">
-              The academy is accessible by all major bus routes, providing students with convenient and reliable transportation options from all parts of the city.
+            Line Academy is not just a coaching institute but also a guiding light of learning and opportunity. With its unwavering commitment to excellence, it transforms aspirations into achievements. From engineering license exams to supporting students through challenging back exams, Line Academy stands as a pillar of guidance and success.
             </p>
+            </div>
           </motion.div>
 
-          <motion.div
-            className="bg-white p-6 rounded-3xl shadow-md w-72 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:animate-none"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-          >
-            <h3 className="text-2xl font-semibold mb-4">Ample Parking Facilities</h3>
-            <p className="text-gray-700">
-              The academy offers on-site parking, making it convenient for students and visitors who prefer to drive, ensuring a hassle-free experience for those commuting by their own vehicle.
-            </p>
-          </motion.div>
+         
         </div>
       </div>
 

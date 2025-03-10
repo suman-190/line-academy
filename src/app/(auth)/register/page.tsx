@@ -12,7 +12,7 @@ interface RegisterFormInputs {
   name: string;
   email: string;
   examType: string;
-  branch: string;
+  course: string;
   password: string;
   confirmPassword: string;
 }
@@ -96,9 +96,9 @@ export default function Register() {
 
           {/* Branch Dropdown based on Exam Type */}
           <div>
-            <label className="block font-medium text-gray-700">Branch</label>
+            <label className="block font-medium text-gray-700">Course</label>
             <select
-              {...register("branch", { required: "Please select a branch" })}
+              {...register("course", { required: "Please select a branch" })}
               className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-400"
             >
               <option value="">Select Branch</option>
@@ -131,7 +131,7 @@ export default function Register() {
                 </>
               )}
             </select>
-            {errors.branch && <p className="text-red-500 text-sm">{errors.branch.message}</p>}
+            {errors.course && <p className="text-red-500 text-sm">{errors.course.message}</p>}
           </div>
 
           {/* Password Field */}

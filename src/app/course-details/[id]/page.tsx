@@ -2,6 +2,7 @@
 
 import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { FaClock, FaGraduationCap, FaGlobe } from "react-icons/fa";
 
@@ -46,11 +47,13 @@ import LokCECO from "../../../../public/Loksewa_subjects/5.png";
 import LokOpe from "../../../../public/Loksewa_subjects/6.png";
 
 
+// import ComputerSyllabus from "../../../../public/syllabus/computerEngineerSyllabus.pdf"
 
 
+const syllabusUrl = "/syllabus/computerEngineerSyllabus.pdf";
 
 const data = [
-  // NEC License Preparation
+ 
   {
     id: "computer-engineering",
     subject: "Computer Engineering",
@@ -538,9 +541,15 @@ export default function CivilEngineeringPage() {
 
           {/* Buttons */}
           <div className="flex gap-4">
-            <button className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition">SYLLABUS →</button>
+          <a href={syllabusUrl} target="_blank" rel="noopener noreferrer">
+      <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700">
+        View Syllabus
+      </button>
+    </a>
             <button className="bg-gray-700 text-white px-4 py-2 rounded-md hover:bg-gray-800 transition">OLD QUESTIONS</button>
-            <button className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition">ENROLL NOW</button>
+            <Link href="/register">
+              <button className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition">ENROLL NOW</button>
+            </Link>
           </div>
         </div>
 
