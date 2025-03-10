@@ -22,7 +22,7 @@ import Tr1 from "../../public/Training_category/Engineering training.png";
 import Tr2 from "../../public/Training_category/IT training.png";    
 import Tr3 from "../../public/Training_category/Professional training.png";
 
-import Strimage from "../../public/strength.png"
+// import Strimage from "../../public/strength.png"
 
 
 import SarojYadav from "../../public/students/sarojYadv.jpeg"
@@ -201,7 +201,7 @@ const Main = () => {
           transition={{ delay: 0.6, duration: 0.6 }}
         >
           <p className="text-lg text-center text-amber-400">{textArray[textIndex]}</p>
-          <Image src={Strimage } height={300} width={800} alt="image" className="relative sm:left-40"/>
+          {/* <Image src={Strimage } height={300} width={800} alt="image" className="relative sm:left-40"/> */}
         </motion.div>
       </div>
     </section>
