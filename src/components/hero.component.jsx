@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import HeroIcon from "../../public/Hero.png";
+import { Typewriter } from "react-simple-typewriter";
 
 const imageVariants = (delay) => ({
   hidden: { scale: 0.2, opacity: 0 },
@@ -18,7 +19,16 @@ const Hero = () => {
       {/* Left Side - Heading and Text */}
       <div className="p-4 sm:p-8 w-full sm:w-1/2">
         <h1 className="font-bold text-xl  sm:text-5xl ">
-          Build Your Future, Choose your Course
+        <Typewriter
+            words={['Line Acdemy','Engineering Your success','Build Your Future',"Success With Us!" ]}
+            loop={10}
+            cursor
+            cursorStyle='...'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            
+          />
         </h1>
         <p className="mt-4">
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velitofficia consequat.
