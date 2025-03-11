@@ -1,10 +1,12 @@
 import Image from "next/image";
 import { Poppins } from "next/font/google";
-// import { Facebook, Instagram, Linkedin, Youtube, TikTok } from "lucide-react"; 
+// import { Facebook, Instagram, Linkedin, Youtube, TikTok, Link } from "lucide-react"; 
+import { FaFacebookSquare, FaInstagramSquare, FaLinkedin, FaTiktok, FaWhatsappSquare } from "react-icons/fa";
 
 import Esewa from "../../public/Payment/download.png";
 import PhonePay from "../../public/Payment/fonepay-logo.png";
 import ConnectIps from "../../public/Payment/connect_ips.png";
+import Link from "next/link";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -22,11 +24,10 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:underline">About Us</a></li>
-              <li><a href="#" className="hover:underline">Contact Us</a></li>
-              <li><a href="#" className="hover:underline">Our Team</a></li>
-              <li><a href="#" className="hover:underline">Our Mission/Vision</a></li>
-              <li><a href="#" className="hover:underline">Our Facilities</a></li>
+              <li><a href="/" className="hover:underline">Home</a></li>
+              <li><a href="/about" className="hover:underline">About Us</a></li>
+              <li><a href="/contact" className="hover:underline">Contact Us</a></li>
+             
             </ul>
           </div>
 
@@ -44,11 +45,21 @@ const Footer = () => {
 
           {/* Contact Section */}
           <div>
+            <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <p>Line Academy</p>
             <p>01-5445555</p>
             <p>info.lineacademy@gmail.com</p>
             <p>Jal Vinayak Marg, Pulchowk, Lalitpur-20</p>
+            </div>
+            <div className="flex gap-1">
+            <Link href={"./"}><FaFacebookSquare/></Link>
+            <Link href={"./"}><FaInstagramSquare/></Link>
+            <Link href={"./"}><FaLinkedin/></Link>
+            <Link href={"./"}><FaWhatsappSquare/></Link>
+            <Link href={"./"}><FaTiktok/></Link>
+
+            </div>
 
             {/* Social Icons */}
             <div className="flex space-x-4 mt-4">
@@ -73,7 +84,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="text-center text-sm mt-8 border-t border-gray-500 pt-4">
-          © 2008 - 2024. Line Academy. All rights reserved.
+          © 2008 - 2025. Line Academy. All rights reserved.
         </div>
       </footer>
     </div>
