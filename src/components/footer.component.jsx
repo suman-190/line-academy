@@ -14,7 +14,7 @@ const poppins = Poppins({
 
 const Footer = () => {
   return (
-    <div className={`${poppins.className}`}>
+    <div className={`${poppins.className} p-8`}>
       <footer className="bg-[#1A2E7D] text-white py-10 mt-4 rounded-2xl mb-10">
         <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-8">
           

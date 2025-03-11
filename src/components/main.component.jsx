@@ -267,7 +267,7 @@ const Main = () => {
 
 
 
-    <section className="relative py-16 bg-gradient-to-r from-[#004aad] to-blue-400 text-white mt-8 rounded-[0%_10%_0%_0%]">
+    <section className="relative py-16 bg-gradient-to-r from-[#004aad] to-blue-400 text-white mt-8 rounded-[1%_4%_2%_2%]">
       <div className="container mx-auto px-6">
         <motion.h2
           className="text-4xl font-bold mb-6 text-center"
