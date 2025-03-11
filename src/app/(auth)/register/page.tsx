@@ -41,7 +41,7 @@ export default function Register() {
   const password = watch("password");
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-blue-500 to-yellow-500 mt-4">
+    <div className="flex justify-center pb-4   bg-gradient-to-br from-blue-500 to-white mt-4">
       <div className="bg-white p-8 rounded-lg shadow-lg w-96 mt-4">
         {/* Logo */}
         <div className="flex justify-center mb-4">

@@ -19,9 +19,9 @@ const Nav = () => {
         { "id": "computer-engineering", "name": "Computer Engineering" },
         { "id": "civil-engineering", "name": "Civil Engineering" },
         { "id": "mechanical-engineering", "name": "Mechanical Engineering" },
-        { "id": "electrical-electronics-engineering", "name": "Electrical and Electronics Engineering" },
+        { "id": "electrical-electronics-engineering", "name": "Electrical and Electronics Engg..." },
         {"id":"architectural-engineering","name":"Architectural Engineering"},
-        {"id":"electronics-communication-engineering","name":"Electronics and Communication Engineering"},
+        {"id":"electronics-communication-engineering","name":"Electronics and Communication Engg..."},
         {"id":"elctrical-engineering","name":"Electrical Engineering"},
  
         {"id":"information-technology-engineering","name":"Information Technology Engineering"},
@@ -99,7 +99,7 @@ const Nav = () => {
   return (
     <>
       <motion.div
-        className="bg-[#004aad] px-4 sm:px-20 py-2 min-h-16 w-full sm:flex items-center justify-between"
+        className="bg-[#004aad] px-4 sm:px-20 py-2 min-h-16 w-full sm:flex items-center justify-center "
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -107,44 +107,7 @@ const Nav = () => {
       <Link href="/">
       <Image src={Logo} alt="Logo" width={100} height={100} />
       </Link>
-
-        <motion.ul
-          className="flex items-center text-white gap-4 cursor-pointer"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <motion.li
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-          >
-            <Link href="/login">Login</Link>
-          </motion.li>
-          <motion.li
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-          >
-            <Link href="/register">Register</Link>
-          </motion.li>
-          <motion.li
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1 }}
-          >
-            <motion.button
-              className="py-1 px-3 sm:py-2 sm:px-6 bg-blue-600 text-white border border-transparent rounded-lg shadow-md transition-all duration-300 ease-in-out hover:bg-white hover:text-blue-600 hover:border-white hover:shadow-lg active:scale-95 cursor-pointer"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 1.2 }}
-            >
-              Mock Test
-            </motion.button>
-          </motion.li>
-        </motion.ul>
-      </motion.div>
-      <div className="flex items-center justify-between px-4 sm:px-22 pb-4">
+      <div className="flex items-center gap-24 justify-between px-4 sm:px-22 pb-4">
         <div
           className="relative inline-block top-2"
           onMouseLeave={() => {
@@ -154,7 +117,7 @@ const Nav = () => {
         >
           {/* Dropdown Button */}
           <button
-            className="px-4 py-2  border border-sky-500 text-blue-600 rounded-md "
+            className="px-4 py-2  border border-white text-white rounded-md "
             onMouseEnter={() => setOpenMenu(true)}
           >
             <span>All Courses</span> <span  className="relative top-0.5 ">▼</span>
@@ -191,7 +154,7 @@ const Nav = () => {
           <AnimatePresence>
             {selectedCategory && openSubMenu && openMenu && (
               <motion.div
-                className="absolute left-64 top-12 bg-white shadow-lg rounded-lg w-64 p-2 sm:left-64 sm:w-3xl sm:min-h-96 border border-blue-600 z-10"
+                className="absolute left-64 top-12 bg-white shadow-lg rounded w-64 p-2 sm:left-64 sm:w-fit sm:min-h-96 border border-blue-600 z-10"
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -10 }}
@@ -209,7 +172,7 @@ const Nav = () => {
                   }
                   key={name}
                 >
-                <li className="p-2 rounded-2xl shadow hover:shadow-xl border border-transparent hover:border-gray-300 transition-all duration-300 cursor-pointer">
+                <li className="p-2 rounded shadow hover:shadow-xl border-2 border-transparent hover:border-gray-300 transition-all duration-300 cursor-pointer">
   {name}
 </li>
 
@@ -231,8 +194,8 @@ const Nav = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="sm:px-4 sm:py-2 rounded-lg text-blue-600 bg-transparent transition-all duration-300 ease-in-out 
-              hover:bg-blue-600 hover:text-white hover:shadow-lg"
+            className="sm:px-4 sm:py-2 rounded-lg text-white bg-transparent transition-all duration-300 ease-in-out 
+              hover:bg-white hover:text-black hover:shadow-lg"
           >
             {name}
           </motion.li>
@@ -241,6 +204,48 @@ const Nav = () => {
       </ul>
     </div>
       </div>
+
+        <motion.ul
+          className="flex items-center gap-2 text-white  cursor-pointer"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <motion.li
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+             className="sm:px-4 sm:py-2 rounded-lg text-white bg-transparent transition-all duration-300 ease-in-out 
+              hover:bg-white hover:text-black hover:shadow-lg"
+          >
+            <Link href="/login">Login</Link>
+          </motion.li>
+          <motion.li
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+             className="sm:px-4 sm:py-2 rounded-lg text-white bg-transparent transition-all duration-300 ease-in-out 
+              hover:bg-white hover:text-black hover:shadow-lg"
+          >
+            <Link href="/register">Register</Link>
+          </motion.li>
+          <motion.li
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 1 }}
+          >
+            <motion.button
+              className="py-1 px-3 sm:py-2 sm:px-6 bg-blue-600 text-white border border-transparent rounded-lg shadow-md transition-all duration-300 ease-in-out hover:bg-white hover:text-blue-600 hover:border-white hover:shadow-lg active:scale-95 cursor-pointer"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 1.2 }}
+            >
+              Mock Test
+            </motion.button>
+          </motion.li>
+        </motion.ul>
+      </motion.div>
+      
     </>
   );
 };

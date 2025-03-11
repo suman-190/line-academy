@@ -15,23 +15,24 @@ const imageVariants = (delay) => ({
 
 const Hero = () => {
   return (
-    <div className="bg-gray-300 h-11/12  sm:flex  justify-between items-center  mt-4 py-14 px-8 sm:px-24">
+    <div className="bg-gray-300 h-11/12  sm:flex  justify-center items-center gap-22  mt-4 py-14 px-8 sm:px-20">
       {/* Left Side - Heading and Text */}
-      <div className="p-4 sm:p-8 w-full sm:w-1/2">
-        <h1 className="font-bold text-xl  sm:text-5xl ">
+      <div className="p-4 sm:p-2 w-full sm:w-2xl">
+        <h1 className= " font-medium text-xl  sm:text-5xl ">
+          <p>Learn With Line Academy</p>
         <Typewriter
-            words={['Line Acdemy','Engineering Your success','Build Your Future',"Success With Us!" ]}
-            loop={10}
+            words={['Affordable','Intutive',"Practical" ]}
+            loop={50}
             cursor
             cursorStyle='...'
-            typeSpeed={70}
+            typeSpeed={80}
             deleteSpeed={50}
             delaySpeed={1000}
             
           />
         </h1>
         <p className="mt-4">
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velitofficia consequat.
+        A complete learning ecosystem designed to make exam prep and skill-building engaging and effective. 
         </p>
       </div>
 

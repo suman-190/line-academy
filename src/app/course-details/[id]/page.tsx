@@ -522,7 +522,7 @@ export default function CivilEngineeringPage() {
   }
 
   return (
-    <div className="min-h-screen bg-blue-900 flex items-center justify-center p-6">
+    <div className=" bg-blue-900 flex  justify-center p-6">
       <div className="bg-white rounded-lg p-6 sm:p-10 w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Left Side: Course Details */}
         <div className="space-y-6 text-black">

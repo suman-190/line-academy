@@ -92,9 +92,9 @@ const Main = () => {
             key={index}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0, delay: index * 0.2 }}
+            transition={{ duration: 0, delay:  0.2 }}
             whileHover={{ scale: 1.1 }}
-            className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer transition duration-300 hover:shadow-[0px_4px_15px_rgba(255,215,0,0.6)] border-amber-200 p-2 border"
+            className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer transition duration-300 hover:shadow-blue-300 border-gray-300 p-2 border"
           >
             <Image src={image} alt={`BE${index + 1}`} height={250} width={250} className="rounded" />
           </motion.div>
@@ -114,12 +114,12 @@ const Main = () => {
       <div className="flex flex-wrap justify-center gap-6">
         {selectedImages.map((image, index) => (
           <motion.div
-            key={index}
-            initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50, scale: 0.8 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ duration: 0.3, delay: index * 0.1 }}
-            whileHover={{ scale: 1.1, rotate: 2 }}
-            className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer transition duration-300 hover:shadow-[0px_4px_15px_rgba(255,215,0,0.6)] border-amber-200 p-2 border"
+          key={index}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0, delay: index * 0.2 }}
+          whileHover={{ scale: 1.1 }}
+          className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer transition duration-300 hover:shadow-blue-300 border-gray-300 p-2 border"
           >
             <Image src={image} alt={`NEC Image ${startIndex + index + 1}`} height={250} width={250} className="rounded" />
           </motion.div>
@@ -160,22 +160,12 @@ const Main = () => {
       <div className="flex flex-wrap justify-center gap-6">
         {trainingImages.map((image, index) => (
           <motion.div
-            key={index}
-            initial={{
-              opacity: 0, // Make the image invisible initially
-              scale: 0,  // Start the image from 0 scale
-            }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}} // Fade in and scale to normal
-            transition={{
-              duration: 0.2, // Duration of the expand effect
-              delay: index * 0.1, // Delay for each image for staggered effect
-              ease: "easeOut",
-            }}
-            whileHover={{
-              scale: 1.2, // Expand image on hover
-              transition: { duration: 0.3, ease: "easeOut" },
-            }}
-            className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer transition duration-300 hover:shadow-[0px_4px_20px_rgba(255,215,0,0.7)] border-amber-200 p-2 border"
+          key={index}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0, delay: index * 0.2 }}
+          whileHover={{ scale: 1.1 }}
+          className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer transition duration-300 hover:shadow-blue-300 border-gray-300 p-2 border"
           >
             <Image src={image} alt={`BE${index + 1}`} height={250} width={250} className="rounded" />
           </motion.div>
@@ -200,7 +190,7 @@ const Main = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.6 }}
         >
-          <p className="text-lg text-center text-amber-400">{textArray[textIndex]}</p>
+          <p className="text-lg text-center text-white">{textArray[textIndex]}</p>
           {/* <Image src={Strimage } height={300} width={800} alt="image" className="relative sm:left-40"/> */}
         </motion.div>
       </div>
