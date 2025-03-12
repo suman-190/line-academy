@@ -166,7 +166,7 @@ const TrainingDetails = ()=>{
             <div className="flex flex-col gap-5">
               <h1 className="font-bold text-center text-2xl">{course.subject}</h1>
               <div className="flex gap-3 flex-wrap justify-center">
-              {course.details.map(({hrf,img},index)=>{
+              {course.details.map(({hrf,img}:{hrf:any,img:string},index:number)=>{
                 return( <Link href={`/course-details/${hrf}`} key={index} className="border border-amber-200 p-2 rounded-2xl">
                 <Image src={img} alt="img" height={150} width={150} className="rounded-xl"/>
                 </Link>)
