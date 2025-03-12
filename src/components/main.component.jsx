@@ -2,6 +2,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef,useEffect,useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import BE1 from "../../public/B.E._coaching_universities/1.png";
 import BE2 from "../../public/B.E._coaching_universities/2.png";
@@ -22,6 +23,7 @@ import Tr1 from "../../public/Training_category/Engineering training.png";
 import Tr2 from "../../public/Training_category/IT training.png";    
 import Tr3 from "../../public/Training_category/Professional training.png";
 
+
 // import Strimage from "../../public/strength.png"
 
 
@@ -29,9 +31,81 @@ import SarojYadav from "../../public/students/sarojYadv.jpeg"
 import RiyaBhattari from "../../public/students/RIyaBhttarai.jpeg"
 import PrabeshPokharel  from "../../public/students/PrabeshPokharel.jpeg"
 
-const images = [BE1, BE2, BE3, BE4];
-const li_Images=[Li1,Li2,Li3,Li4,Li5,Li6,Li7,Li8,Li9];
-const trainingImages = [Tr1, Tr2, Tr3];
+// const images = [BE1, BE2, BE3, BE4];
+const images=[
+  {
+  href:"ioe",
+  img:BE1
+},
+{
+  href:"pokhara-university",
+  img:BE2
+},
+{
+  href:"purwanchal-university",
+  img:BE3
+},
+{
+  href:"other",
+  img:BE4
+},
+]
+// const li_Images=[Li1,Li2,Li3,Li4,Li5,Li6,Li7,Li8,Li9];
+const li_Images=[
+  {
+    href:"civil-engineering",
+    img:Li1
+  },
+  {
+    href:"mechanical-engineering",
+    img:Li2
+  },
+  {
+    href:"elctrical-engineering",
+    img:Li3
+  },
+  {
+    href:"electrical-electronics-engineering",
+    img:Li4
+  },
+  {
+    href:"computer-engineering",
+    img:Li5
+  },
+  {
+    href:"electronics-communication-engineering",
+    img:Li6
+  },
+  {
+    href:"information-technology-engineering",
+    img:Li7
+  },
+  {
+    href:"architectural-engineering",
+    img:Li9
+  },
+
+  
+]
+// const trainingImages = [Tr1, Tr2, Tr3,Tr3];
+const trainingImages = [
+  {
+  href:"engineering-training",
+  img:Tr1
+},
+{
+  href:"it-training",
+  img:Tr2
+},
+{
+  href:"professional-training",
+  img:Tr3
+},
+{
+  href:"management-training",
+  img:Tr3
+},
+];
 
 const Main = () => {
     const sectionRef = useRef(null);
@@ -87,16 +161,17 @@ const Main = () => {
         B.E Coaching Classes
       </motion.h1>
       <div className="flex flex-wrap justify-center gap-6">
-        {images.map((image, index) => (
+        {images.map(({img,href}, index) => (
           <motion.div
-            key={index}
-            initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, x: index < 2 ? -30 : 30}}
+          whileInView={{ opacity: 1, x: 0 }}
+            key={index}           
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0, delay:  0.2 }}
             whileHover={{ scale: 1.1 }}
             className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer transition duration-300 hover:shadow-blue-300 border-gray-300 p-2 border"
           >
-            <Image src={image} alt={`BE${index + 1}`} height={250} width={250} className="rounded" />
+          <Link href={`be-coaching/${href}`} >  <Image src={img} alt={`BE${index + 1}`} height={250} width={250} className="rounded" /></Link>
           </motion.div>
         ))}
       </div>
@@ -112,16 +187,18 @@ const Main = () => {
       </motion.h1>
 
       <div className="flex flex-wrap justify-center gap-6">
-        {selectedImages.map((image, index) => (
+        {selectedImages.map(({img,href}, index) => (
           <motion.div
           key={index}
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, x: index < 2 ? -30 : 30}}
+          whileInView={{ opacity: 1, x: 0 }}
+          
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0, delay: index * 0.2 }}
           whileHover={{ scale: 1.1 }}
           className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer transition duration-300 hover:shadow-blue-300 border-gray-300 p-2 border"
           >
-            <Image src={image} alt={`NEC Image ${startIndex + index + 1}`} height={250} width={250} className="rounded" />
+             <Link href={`course-details/${href}`} >  <Image src={img} alt={`BE${index + 1}`} height={250} width={250} className="rounded" /></Link>
           </motion.div>
         ))}
       </div>
@@ -158,16 +235,17 @@ const Main = () => {
       </motion.h1>
 
       <div className="flex flex-wrap justify-center gap-6">
-        {trainingImages.map((image, index) => (
+        {trainingImages.map(({href,img}, index) => (
           <motion.div
           key={index}
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, x: index < 2 ? -30 : 30}}
+          whileInView={{ opacity: 1, x: 0 }}          
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0, delay: index * 0.2 }}
           whileHover={{ scale: 1.1 }}
           className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer transition duration-300 hover:shadow-blue-300 border-gray-300 p-2 border"
           >
-            <Image src={image} alt={`BE${index + 1}`} height={250} width={250} className="rounded" />
+            <Link href={`training/${href}`} >  <Image src={img} alt={`BE${index + 1}`} height={250} width={250} className="rounded" /></Link>
           </motion.div>
         ))}
       </div>

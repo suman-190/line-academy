@@ -5,7 +5,18 @@ import Image from 'next/image';
 import CEOImage from '../../../public/ceo.png';
 
 const AboutPage = () => {
+  const textVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+  };
+
+  const imageVariants = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+  };
+
   const boxVariants = {
+    
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 1.5, ease: 'easeOut' } },
   };
@@ -155,6 +166,42 @@ const AboutPage = () => {
         </motion.li>
       </ul>
     </motion.div>
+    <div className="py-12 px-4 md:px-16 lg:px-24">
+      <h2 className="text-center text-3xl font-bold text-blue-900 mb-8">OUR FACILITIES</h2>
+      <div className="w-24 h-1 bg-yellow-500 mx-auto mb-10"></div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+        <motion.div variants={textVariants} initial="hidden" animate="visible" className="space-y-4">
+          <h3 className="text-xl font-bold text-blue-900">Modern, Technology-Enhanced Classrooms</h3>
+          <p className="text-gray-700">Our classrooms are thoughtfully designed to foster an optimal learning environment. Featuring advanced technology such as projectors, high-speed internet, and Smart boards, we ensure that students have access to top-notch educational facilities.</p>
+        </motion.div>
+        <motion.img variants={imageVariants} initial="hidden" animate="visible" src="/classroom.jpg" alt="Classroom" className="w-full rounded-lg shadow-lg" />
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+        <motion.img variants={imageVariants} initial="hidden" animate="visible" src="/faculty.jpg" alt="Faculty" className="w-full rounded-lg shadow-lg" />
+        <motion.div variants={textVariants} initial="hidden" animate="visible" className="space-y-4">
+          <h3 className="text-xl font-bold text-blue-900">Experienced and Skilled Faculty</h3>
+          <p className="text-gray-700">Our faculty members bring a wealth of knowledge and real-world expertise to the classroom. They are committed to fostering a supportive and engaging learning atmosphere.</p>
+        </motion.div>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+        <motion.div variants={textVariants} initial="hidden" animate="visible" className="space-y-4">
+          <h3 className="text-xl font-bold text-blue-900">Dedicated Student Support Services</h3>
+          <p className="text-gray-700">We offer comprehensive support services, including academic counseling, career guidance, and mental health resources, ensuring student success inside and outside the classroom.</p>
+        </motion.div>
+        <motion.img variants={imageVariants} initial="hidden" animate="visible" src="/support.jpg" alt="Support Services" className="w-full rounded-lg shadow-lg" />
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <motion.img variants={imageVariants} initial="hidden" animate="visible" src="/internship.jpg" alt="Internships" className="w-full rounded-lg shadow-lg" />
+        <motion.div variants={textVariants} initial="hidden" animate="visible" className="space-y-4">
+          <h3 className="text-xl font-bold text-blue-900">Industry-Linked Internship and Placement Opportunities</h3>
+          <p className="text-gray-700">We provide students with internship and placement opportunities through strategic partnerships with leading companies and organizations.</p>
+        </motion.div>
+      </div>
+    </div>
     </div>
   );
 };

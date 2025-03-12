@@ -500,6 +500,15 @@ const data = [
     mode: "Both, On-site And Online",
     description:
       "Intensive coaching to prepare students for MSC Electrical & Electronics Engineering entrance exams.",
+  },
+  {
+    id: "engineering-training",
+    subject: "Engineering-Trai",
+    exams: "MSC Entrance Preparation",
+    duration: "3 months",
+    mode: "Both, On-site And Online",
+    description:
+      "Intensive coaching to prepare students for MSC Electrical & Electronics Engineering entrance exams.",
   }
   
 ];

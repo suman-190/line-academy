@@ -1,16 +1,41 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { GoChevronRight } from "react-icons/go";
 
 import Logo from "../../public/Logo-white.png"
 
-const Nav = () => {
+type props= {
+  className?:string
+}
+
+const Nav = ({className}:props) => {
   const [openMenu, setOpenMenu] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [openSubMenu, setOpenSubMenu] = useState(false);
+
+  const [showNav, setShowNav] = useState(true);
+  let scrollTimeout: NodeJS.Timeout;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowNav(false); // Hide navbar when scrolling
+      clearTimeout(scrollTimeout);
+
+      // Set timeout to show navbar after user stops scrolling
+      scrollTimeout = setTimeout(() => {
+        setShowNav(true);
+      }, 500); // Adjust time as needed (500ms)
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(scrollTimeout);
+    };
+  }, []);
 
   const categories = [
     {
@@ -88,18 +113,49 @@ const Nav = () => {
     {"name": "Home",
       "href": "/"},
     
-    {"name": "Contact Us",
-      "href": "/contact"},
+   
     
     {"name": "About Us",
       "href": "/about"},
+      {"name": "Contact Us",
+        "href": "/contact"},
    
   ]
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  useEffect(() => {
+    let scrollTimeout:any;
+
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        setShowNav(false);
+      } else {
+        setShowNav(true);
+      }
+      setLastScrollY(window.scrollY);
+
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        setShowNav(true);
+      }, 500);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(scrollTimeout);
+    };
+  }, [lastScrollY]);
+
 
   return (
-    <>
+    <div className={`fixed w-full  bg-white shadow-md transition-transform duration-700 ease-in-out transform ${showNav ? "translate-y-0" : "-translate-y-full"} z-50 ${showNav ? "top-0" : "-top-full"}`}> 
+    
       <motion.div
-        className="bg-[#004aad] px-4 sm:px-20 py-2 min-h-16 w-full sm:flex items-center justify-center "
+        className="bg-[#004aad] px-4 sm:px-20 py-2 min-h-16 w-full sm:flex items-center justify-center transition-transform duration-500"
+        
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -246,7 +302,7 @@ const Nav = () => {
         </motion.ul>
       </motion.div>
       
-    </>
+    </div>
   );
 };
 

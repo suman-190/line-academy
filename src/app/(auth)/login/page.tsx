@@ -24,7 +24,7 @@ export default function Login() {
   };
 
   return (
-    <div className="flex justify-center p-10 bg-gradient-to-br from-blue-500 to-white  mt-4">
+    <div className="flex justify-center p-10 bg-gradient-to-br from-blue-500 to-white ">
       <div className="bg-white p-8 rounded-lg shadow-lg w-96">
         {/* Logo */}
         <div className="flex justify-center mb-4">
