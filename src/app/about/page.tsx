@@ -167,7 +167,7 @@ const AboutPage = () => {
       </ul>
     </motion.div>
     <div className="py-12 px-4 md:px-16 lg:px-24">
-      <h2 className="text-center text-3xl font-bold text-blue-900 mb-8">OUR FACILITIES</h2>
+      <h2 className="text-center text-3xl font-bold text-blue-900 mb-8">Our Facilities</h2>
       <div className="w-24 h-1 bg-yellow-500 mx-auto mb-10"></div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
@@ -202,6 +202,7 @@ const AboutPage = () => {
         </motion.div>
       </div>
     </div>
+    
     </div>
   );
 };
