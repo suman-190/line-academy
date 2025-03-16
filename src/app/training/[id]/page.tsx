@@ -25,7 +25,7 @@ import Link from "next/link";
 const traingData=[
     {
         id: "engineering-training",
-        subject: "Engineering-Trai",
+        subject: "Engineering Training",
         details:[{
             hrf:"autocad-electrical",
             img:AutoCadEle
