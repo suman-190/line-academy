@@ -9,7 +9,7 @@ const Coaching = ()=>{
         setSubject(data)
     }
     return (
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center mt-30">
             <div className="flex gap-2">
             <button onClick={()=>{
                 handleSubjectChnage("computerEngg")
