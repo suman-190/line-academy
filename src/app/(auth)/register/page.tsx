@@ -80,7 +80,7 @@ export default function Register() {
 
           {/* Exam Type Dropdown */}
           <div>
-            <label className="block font-medium text-gray-700">Exam Type</label>
+            <label className="block font-medium text-gray-700">Facuilty</label>
             <select
               {...register("examType", { required: "Please select an exam type" })}
               className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-400"

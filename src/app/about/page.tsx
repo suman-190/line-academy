@@ -4,6 +4,15 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import CEOImage from '../../../public/ceo.png';
 
+import UtkristImg from "../../../public/OurTeams/utkrist.png"
+import SujitaImg from "../../../public/OurTeams/sujita.png"
+import DavidImg from "../../../public/OurTeams/David.png"
+import AnupImg from "../../../public/OurTeams/Anup.png"
+
+import ClassRommImg from "../../../public/ourFacilities/classroom.png"
+import FacuiltyImg from "../../../public/ourFacilities/facuilty.jpg"
+import ClassRommImg2 from "../../../public/ourFacilities/classroom2.png"
+
 const AboutPage = () => {
   const textVariants = {
     hidden: { opacity: 0, x: -50 },
@@ -26,6 +35,29 @@ const AboutPage = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 1, ease: 'easeOut' } },
   };
 
+  const teamMembers = [
+    {
+      name: "ER. UTKRIST SHRESTHA",
+      position: "Chief Operating Officer (COO)",
+      imgSrc: UtkristImg,
+    },
+    {
+      name: "MS. SUJITA KHADKA",
+      position: "Chief Administrative Officer (CAO)",
+      imgSrc: SujitaImg,
+    },
+    {
+      name: "MR. DAVID KUMAL",
+      position: "Marketing Advisor",
+      imgSrc: DavidImg,
+    },
+    {
+      name: "CA. ANUP SHARMA",
+      position: "Financial Advisor",
+      imgSrc: AnupImg,
+    },
+  ];
+
   return (
     <div>
     <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4 text-white">
@@ -43,9 +75,9 @@ const AboutPage = () => {
         >
           About Line Academy
           <p className='w-64 bg-white h-0.5 mt-2 rounded-xl'></p>
-          <div className='mt-4'>
+          <div className='mt-4 bg-[#004aad]'>
             <Image
-              src={CEOImage}   alt="CEO" className='rounded-4xl' height={80} width={80}></Image>
+              src={CEOImage}   alt="CEO" className='rounded-4xl' height={300} width={300}></Image>
          </div>
          <h1>ER.SUNEIL THAPA</h1>
          <h1>CHIEF EXECUTAIVE OFFICER</h1>
@@ -175,11 +207,11 @@ const AboutPage = () => {
           <h3 className="text-xl font-bold text-blue-900">Modern, Technology-Enhanced Classrooms</h3>
           <p className="text-gray-700">Our classrooms are thoughtfully designed to foster an optimal learning environment. Featuring advanced technology such as projectors, high-speed internet, and Smart boards, we ensure that students have access to top-notch educational facilities.</p>
         </motion.div>
-        <motion.img variants={imageVariants} initial="hidden" animate="visible" src="/classroom.jpg" alt="Classroom" className="w-full rounded-lg shadow-lg" />
+        <Image   src={ClassRommImg2} alt="Classroom" width={600} height={100}  className=" rounded-lg shadow-lg" />
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
-        <motion.img variants={imageVariants} initial="hidden" animate="visible" src="/faculty.jpg" alt="Faculty" className="w-full rounded-lg shadow-lg" />
+      <Image   src={FacuiltyImg} alt="Classroom" width={600} height={100}  className=" rounded-lg shadow-lg" />
         <motion.div variants={textVariants} initial="hidden" animate="visible" className="space-y-4">
           <h3 className="text-xl font-bold text-blue-900">Experienced and Skilled Faculty</h3>
           <p className="text-gray-700">Our faculty members bring a wealth of knowledge and real-world expertise to the classroom. They are committed to fostering a supportive and engaging learning atmosphere.</p>
@@ -191,7 +223,7 @@ const AboutPage = () => {
           <h3 className="text-xl font-bold text-blue-900">Dedicated Student Support Services</h3>
           <p className="text-gray-700">We offer comprehensive support services, including academic counseling, career guidance, and mental health resources, ensuring student success inside and outside the classroom.</p>
         </motion.div>
-        <motion.img variants={imageVariants} initial="hidden" animate="visible" src="/support.jpg" alt="Support Services" className="w-full rounded-lg shadow-lg" />
+        <Image   src={ClassRommImg} alt="Classroom" width={600} height={100}  className=" rounded-lg shadow-lg" />
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -201,7 +233,60 @@ const AboutPage = () => {
           <p className="text-gray-700">We provide students with internship and placement opportunities through strategic partnerships with leading companies and organizations.</p>
         </motion.div>
       </div>
+
     </div>
+    <section className="bg-gray-100 py-16 px-4 md:px-20">
+  {/* Section Title */}
+  <div className="text-center mb-12">
+    <h2 className="text-3xl font-bold text-blue-900 ">
+      Our Core Team
+    </h2>
+    <div className="w-16 h-1 bg-yellow-500 mx-auto mt-2"></div>
+  </div>
+
+  {/* Team Members */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 bg-blue-600 p-10 rounded-xl">
+    {teamMembers.map((member, index) => (
+      <motion.div
+        key={index}
+        className="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center text-center relative overflow-hidden"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)" }} // Hover effect
+        transition={{ duration: 0.3 }}
+        viewport={{ once: true }}
+      >
+        {/* Profile Image */}
+        <Image
+          src={member.imgSrc}
+          alt={member.name}
+          width={150}
+          height={150}
+          className="w-36 h-36 rounded-xl border border-blue-600"
+          // whileHover={{ scale: 1.1 }} // Scale effect on image hover
+          // transition={{ duration: 0.3 }}
+        />
+
+        {/* Name & Position */}
+        <div className="mt-4">
+          <h3 className="text-lg font-semibold text-gray-800">{member.name}</h3>
+          <p className="text-sm text-gray-500">{member.position}</p>
+        </div>
+
+        {/* Floating Plus Icon */}
+        <motion.div
+          className="absolute top-4 left-4 bg-red-500 text-white w-8 h-8 flex items-center justify-center rounded-full shadow-md cursor-pointer"
+          whileHover={{ scale: 1.2, rotate: 90 }}
+          transition={{ duration: 0.3 }}
+        >
+          +
+        </motion.div>
+      </motion.div>
+    ))}
+  </div>
+</section>
+
+   
     
     </div>
   );

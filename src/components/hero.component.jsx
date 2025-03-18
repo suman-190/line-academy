@@ -2,6 +2,9 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import HeroIcon from "../../public/Hero.png";
+import FrontImg2 from "../../public/forntImg2/1.png"
+import FrontImg3 from "../../public/forntImg2/2.png"
+import FrontImg4 from "../../public/forntImg2/3.png"
 import { Typewriter } from "react-simple-typewriter";
 
 const imageVariants = (delay) => ({
@@ -56,7 +59,7 @@ const Hero = () => {
             animate="visible"
             className="relative w-32 h-32 sm:w-44 sm:h-40 rounded-[25%_10%] overflow-hidden"
           >
-            <Image src={HeroIcon} alt="Student 2" layout="fill" objectFit="cover" />
+            <Image src={FrontImg2} alt="Student 2" layout="fill" objectFit="cover" />
           </motion.div>
 
           {/* Bottom Left - Semi-Rounded */}
@@ -66,7 +69,7 @@ const Hero = () => {
             animate="visible"
             className="relative w-32 h-32 sm:w-44 sm:h-40 rounded-[25%_10%] overflow-hidden"
           >
-            <Image src={HeroIcon} alt="Student 3" layout="fill" objectFit="cover" />
+            <Image src={FrontImg3} alt="Student 3" layout="fill" objectFit="cover" />
           </motion.div>
 
           {/* Bottom Right - Circular */}
@@ -76,7 +79,7 @@ const Hero = () => {
             animate="visible"
             className="relative w-32 h-32 sm:w-44 sm:h-40 rounded-full overflow-hidden"
           >
-            <Image src={HeroIcon} alt="Student 4" layout="fill" objectFit="cover" />
+            <Image src={FrontImg4} alt="Student 4" layout="fill" objectFit="cover" />
           </motion.div>
         </div>
       </div>

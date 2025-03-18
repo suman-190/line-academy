@@ -46,7 +46,7 @@ const Nav = ({className}:props) => {
         { "id": "mechanical-engineering", "name": "Mechanical Engineering" },
         { "id": "electrical-electronics-engineering", "name": "Electrical and Electronics Engg..." },
         {"id":"architectural-engineering","name":"Architectural Engineering"},
-        {"id":"electronics-communication-engineering","name":"Electronics and Communication Engg..."},
+        {"id":"electronics-communication-engineering","name":"Electronics and Commun... Engg..."},
         {"id":"elctrical-engineering","name":"Electrical Engineering"},
  
         {"id":"information-technology-engineering","name":"Information Technology Engineering"},
@@ -73,9 +73,9 @@ const Nav = ({className}:props) => {
         {"id":"advanced-excel","name":"Advanced Excel"},
         {"id":"project-management","name":"Project Management"},
         {"id":"procument-mgmt-and-e-bid","name":"Procurement Management and E-Bidding"},
+        { "id": "rcc-structural-analysis", "name": "Structural Analysis & Design of RCC using IDEA StatiCa ETABS SAFE" },
         { "id": "autocad-electrical", "name": "AUTOCAD Electrical" },
         { "id": "autocad-2d-3d", "name": "AUTOCAD 2D & 3D" },
-        { "id": "rcc-structural-analysis", "name": "Structural Analysis & Design of RCC using IDEA StatiCa ETABS SAFE" },
         { "id": "municipal-mapping", "name": "Municipal Map Making & 3D Modeling using Vray SketchUp" },
         { "id": "c-programming", "name": "C Programming" },
         { "id": "ai-digital-marketing", "name": "AI Powered Digital Marketing" },
@@ -149,12 +149,23 @@ const Nav = ({className}:props) => {
     };
   }, [lastScrollY]);
 
+const [screentWidth,setScreenWidth]=useState(0)
+  useEffect(()=>{
+    
+       window.addEventListener("resize",(e)=>{
+          setScreenWidth(window.innerWidth)
+       })
+  })
+
+  console.log(screentWidth)
+
+
 
   return (
     <div className={`fixed w-full  bg-white shadow-md transition-transform duration-700 ease-in-out transform ${showNav ? "translate-y-0" : "-translate-y-full"} z-50 ${showNav ? "top-0" : "-top-full"}`}> 
     
       <motion.div
-        className="bg-[#004aad] px-4 sm:px-20 py-2 min-h-16 w-full sm:flex items-center justify-center transition-transform duration-500"
+        className="bg-[#004aad] px-4     py-2 min-h-16 w-full sm:flex items-center justify-center transition-transform duration-500 "
         
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -163,7 +174,7 @@ const Nav = ({className}:props) => {
       <Link href="/">
       <Image src={Logo} alt="Logo" width={100} height={100} />
       </Link>
-      <div className="flex items-center gap-24 justify-between px-4 sm:px-22 pb-4">
+      <div className="flex items-center gap-1 sm:gap-10 justify-between px-4  sm:px:2 lg:px-22 pb-4">
         <div
           className="relative inline-block top-2"
           onMouseLeave={() => {
@@ -173,7 +184,7 @@ const Nav = ({className}:props) => {
         >
           {/* Dropdown Button */}
           <button
-            className="px-4 py-2  border border-white text-white rounded-md "
+            className="px-1  sm:px-4 sm:py-2  border border-white text-white rounded-md w-34 lg:w-auto"
             onMouseEnter={() => setOpenMenu(true)}
           >
             <span>All Courses</span> <span  className="relative top-0.5 ">▼</span>
@@ -242,7 +253,7 @@ const Nav = ({className}:props) => {
         </div>
 
         <div>
-      <ul className="flex gap-4 cursor-pointer pt-4">
+      <ul className="flex gap-1 sm:gap-4  cursor-pointer pt-4">
         {menuItems.map(({name,href}, index) => (
           <Link href={href} key={index}>
           <motion.li
@@ -250,7 +261,7 @@ const Nav = ({className}:props) => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="sm:px-4 sm:py-2 rounded-lg text-white bg-transparent transition-all duration-300 ease-in-out 
+            className=" sm:px-4 sm:py-2 rounded-lg text-white bg-transparent transition-all duration-300 ease-in-out 
               hover:bg-white hover:text-black hover:shadow-lg"
           >
             {name}
