@@ -2,9 +2,9 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import HeroIcon from "../../public/Hero.png";
-import FrontImg2 from "../../public/forntImg2/1.png"
-import FrontImg3 from "../../public/forntImg2/2.png"
-import FrontImg4 from "../../public/forntImg2/3.png"
+import FrontImg4 from "../../public/forntImg2/1.png"
+import FrontImg3 from "../../public/forntImg2/front1.jpg"
+import FrontImg2 from "../../public/forntImg2/front2.jpg"
 import { Typewriter } from "react-simple-typewriter";
 
 const imageVariants = (delay) => ({
@@ -18,7 +18,7 @@ const imageVariants = (delay) => ({
 
 const Hero = () => {
   return (
-    <div className="bg-gray-300 h-11/12  sm:flex  justify-center items-center gap-22  mt-20 py-14 px-8 sm:px-20">
+    <div className="bg-[#caf0f8] h-11/12  sm:flex  justify-center items-center gap-22  mt-20 py-14 px-8 sm:px-20">
       {/* Left Side - Heading and Text */}
       <div className="p-4 sm:p-2 w-full sm:w-2xl">
         <h1 className= " font-medium text-xl  sm:text-5xl ">

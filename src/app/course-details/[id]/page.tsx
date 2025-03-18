@@ -6,20 +6,20 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaClock, FaGraduationCap, FaGlobe } from "react-icons/fa";
 
-import LCivil from "../../../../public/NEClicense_preparation_classes_banner/1.png";
-import LMec from "../../../../public/NEClicense_preparation_classes_banner/2.png";
-import LEle from "../../../../public/NEClicense_preparation_classes_banner/3.png";
-import LEle_Electronics from "../../../../public/NEClicense_preparation_classes_banner/4.png";
-import LCom from "../../../../public/NEClicense_preparation_classes_banner/5.png";
-import LEle_commu from "../../../../public/NEClicense_preparation_classes_banner/6.png";
-import LEle_comu_info from "../../../../public/NEClicense_preparation_classes_banner/7.png";
-import LInfo from "../../../../public/NEClicense_preparation_classes_banner/8.png";
-import LArch from "../../../../public/NEClicense_preparation_classes_banner/9.png";
+import LCivil from "../../../../public/NEC license preparation classes banner/1.png";
+import LMec from "../../../../public/NEC license preparation classes banner/2.png";
+import LEle from "../../../../public/NEC license preparation classes banner/3.png";
+import LEle_Electronics from "../../../../public/NEC license preparation classes banner/4.png";
+import LCom from "../../../../public/NEC license preparation classes banner/5.png";
+import LEle_commu from "../../../../public/NEC license preparation classes banner/6.png";
+import LEle_comu_info from "../../../../public/NEC license preparation classes banner/7.png";
+import LInfo from "../../../../public/NEC license preparation classes banner/8.png";
+import LArch from "../../../../public/NEC license preparation classes banner/9.png";
 
-import CIoe from "../../../../public/B.E._coaching_universities/1.png";
-import CPokhara from "../../../../public/B.E._coaching_universities/2.png";
-import CPurv from "../../../../public/B.E._coaching_universities/3.png";
-import COth from "../../../../public/B.E._coaching_universities/4.png";
+import CIoe from "../../../../public/B.E. coaching universities/1.png";
+import CPokhara from "../../../../public/B.E. coaching universities/2.png";
+import CPurv from "../../../../public/B.E. coaching universities/3.png";
+import COth from "../../../../public/B.E. coaching universities/4.png";
 
 import TPrimavera from "../../../../public/Training_subjects/1.png";
 import TMsOffice from "../../../../public/Training_subjects/2.png";
@@ -563,11 +563,11 @@ export default function CivilEngineeringPage() {
         </div>
 
         {/* Right Side: Image Section */}
-        <div className="relative bg-gradient-to-r from-blue-500 to-blue-300 rounded-lg p-6 flex items-center justify-center">
-          <div className="relative w-40 h-40 sm:w-50 sm:h-50 rounded-full border-4 border-white flex items-center justify-center overflow-hidden">
-            <Image src={course.img} alt={course.subject}  className="h-full w-full" />
-          </div>
-          <p className="absolute bottom-4 text-white font-bold">{course.subject} </p>
+        <div className="relative bg-gradient-to-r from-blue-500 to-blue-300 rounded-2xl p-2 flex items-center justify-center">
+          {/* <div className="relative w-40 h-40 sm:w-50 sm:h-50 rounded-full border-4 border-white flex items-center justify-center overflow-hidden"> */}
+            <Image src={course.img} alt={course.subject}  className="h-full w-full rounded-2xl" />
+          {/* </div> */}
+          {/* <p className="absolute bottom-4 text-white font-bold">{course.subject} </p> */}
         </div>
       </div>
     </div>

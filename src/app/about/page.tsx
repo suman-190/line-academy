@@ -12,6 +12,7 @@ import AnupImg from "../../../public/OurTeams/Anup.png"
 import ClassRommImg from "../../../public/ourFacilities/classroom.png"
 import FacuiltyImg from "../../../public/ourFacilities/facuilty.jpg"
 import ClassRommImg2 from "../../../public/ourFacilities/classroom2.png"
+import InterShipImg from "../../../public/ourFacilities/internshipImages.jpg"
 
 const AboutPage = () => {
   const textVariants = {
@@ -205,7 +206,7 @@ const AboutPage = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
         <motion.div variants={textVariants} initial="hidden" animate="visible" className="space-y-4">
           <h3 className="text-xl font-bold text-blue-900">Modern, Technology-Enhanced Classrooms</h3>
-          <p className="text-gray-700">Our classrooms are thoughtfully designed to foster an optimal learning environment. Featuring advanced technology such as projectors, high-speed internet, and Smart boards, we ensure that students have access to top-notch educational facilities.</p>
+          <p className="text-gray-700">Our classrooms are meticulously designed to create an engaging and productive learning environment. Equipped with state-of-the-art technology, including high-resolution projectors, high-speed internet, and interactive Smart boards, we provide students with the tools they need to enhance their learning experience. Comfortable seating arrangements, ample lighting, and well-ventilated spaces contribute to a conducive atmosphere for focused study. Our commitment to modern education ensures that students have access to digital resources, collaborative learning tools, and an immersive academic setting that fosters creativity, innovation, and critical thinking.</p>
         </motion.div>
         <Image   src={ClassRommImg2} alt="Classroom" width={600} height={100}  className=" rounded-lg shadow-lg" />
       </div>
@@ -214,23 +215,23 @@ const AboutPage = () => {
       <Image   src={FacuiltyImg} alt="Classroom" width={600} height={100}  className=" rounded-lg shadow-lg" />
         <motion.div variants={textVariants} initial="hidden" animate="visible" className="space-y-4">
           <h3 className="text-xl font-bold text-blue-900">Experienced and Skilled Faculty</h3>
-          <p className="text-gray-700">Our faculty members bring a wealth of knowledge and real-world expertise to the classroom. They are committed to fostering a supportive and engaging learning atmosphere.</p>
+          <p className="text-gray-700">Our faculty members are highly experienced professionals who bring a wealth of knowledge and real-world expertise to the classroom. With diverse academic backgrounds and industry experience, they bridge the gap between theory and practical application, ensuring students gain valuable insights. They are dedicated to fostering a supportive, interactive, and engaging learning environment where students feel encouraged to ask questions, explore new ideas, and develop critical thinking skills. Their passion for teaching and mentorship helps students excel academically and prepares them for successful careers.</p>
         </motion.div>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
         <motion.div variants={textVariants} initial="hidden" animate="visible" className="space-y-4">
           <h3 className="text-xl font-bold text-blue-900">Dedicated Student Support Services</h3>
-          <p className="text-gray-700">We offer comprehensive support services, including academic counseling, career guidance, and mental health resources, ensuring student success inside and outside the classroom.</p>
+          <p className="text-gray-700">We offer a range of comprehensive support services designed to ensure student success both inside and outside the classroom. Our academic counseling services provide personalized guidance to help students navigate their educational journey, while career guidance helps them plan for successful professional futures. Additionally, we offer mental health resources to promote emotional well-being and resilience. Our dedicated team is committed to supporting students every step of the way, ensuring they have the tools, guidance, and care they need to thrive in all aspects of their lives.</p>
         </motion.div>
         <Image   src={ClassRommImg} alt="Classroom" width={600} height={100}  className=" rounded-lg shadow-lg" />
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <motion.img variants={imageVariants} initial="hidden" animate="visible" src="/internship.jpg" alt="Internships" className="w-full rounded-lg shadow-lg" />
+        <Image src={InterShipImg} alt="Internships" className="w-full rounded-lg shadow-lg" />
         <motion.div variants={textVariants} initial="hidden" animate="visible" className="space-y-4">
           <h3 className="text-xl font-bold text-blue-900">Industry-Linked Internship and Placement Opportunities</h3>
-          <p className="text-gray-700">We provide students with internship and placement opportunities through strategic partnerships with leading companies and organizations.</p>
+          <p className="text-gray-700">We provide students with valuable internship and placement opportunities through strategic partnerships with top companies and organizations across various industries. These collaborations offer students hands-on experience, allowing them to apply their knowledge in real-world settings and gain practical skills that enhance their employability. By connecting students with industry leaders, we help them build professional networks, refine their career goals, and increase their chances of securing meaningful employment after graduation. Our commitment to student success extends beyond the classroom, ensuring they are well-prepared for their future careers.</p>
         </motion.div>
       </div>
 
@@ -249,7 +250,7 @@ const AboutPage = () => {
     {teamMembers.map((member, index) => (
       <motion.div
         key={index}
-        className="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center text-center relative overflow-hidden"
+        className="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center text-center relative "
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)" }} // Hover effect
@@ -262,7 +263,7 @@ const AboutPage = () => {
           alt={member.name}
           width={150}
           height={150}
-          className="w-36 h-36 rounded-xl border border-blue-600"
+          className=" rounded-xl border border-blue-600"
           // whileHover={{ scale: 1.1 }} // Scale effect on image hover
           // transition={{ duration: 0.3 }}
         />

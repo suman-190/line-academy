@@ -4,20 +4,20 @@ import { useRef,useEffect,useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import BE1 from "../../public/B.E._coaching_universities/1.png";
-import BE2 from "../../public/B.E._coaching_universities/2.png";
-import BE3 from "../../public/B.E._coaching_universities/3.png";
-import BE4 from "../../public/B.E._coaching_universities/4.png";
+import BE1 from "../../public/B.E. coaching universities/1.png";
+import BE2 from "../../public/B.E. coaching universities/2.png";
+import BE3 from "../../public/B.E. coaching universities/3.png";
+import BE4 from "../../public/B.E. coaching universities/4.png";
 
-import Li1 from "../../public/NEClicense_preparation_classes_banner/1.png";
-import Li2 from "../../public/NEClicense_preparation_classes_banner/2.png";
-import Li3 from "../../public/NEClicense_preparation_classes_banner/3.png";
-import Li4 from "../../public/NEClicense_preparation_classes_banner/4.png";
-import Li5 from "../../public/NEClicense_preparation_classes_banner/5.png";
-import Li6 from "../../public/NEClicense_preparation_classes_banner/6.png";
-import Li7 from "../../public/NEClicense_preparation_classes_banner/7.png";
-import Li8 from "../../public/NEClicense_preparation_classes_banner/8.png";
-import Li9 from "../../public/NEClicense_preparation_classes_banner/9.png";    
+import Li1 from "../../public/NEC license preparation classes banner/1.png";
+import Li2 from "../../public/NEC license preparation classes banner/2.png";
+import Li3 from "../../public/NEC license preparation classes banner/3.png";
+import Li4 from "../../public/NEC license preparation classes banner/4.png";
+import Li5 from "../../public/NEC license preparation classes banner/5.png";
+import Li6 from "../../public/NEC license preparation classes banner/6.png";
+import Li7 from "../../public/NEC license preparation classes banner/7.png";
+import Li8 from "../../public/NEC license preparation classes banner/8.png";
+import Li9 from "../../public/NEC license preparation classes banner/9.png";    
 
 import Tr1 from "../../public/Training_category/Engineering training.png";
 import Tr2 from "../../public/Training_category/IT training.png";    
@@ -25,6 +25,10 @@ import Tr3 from "../../public/Training_category/Professional training.png";
 
 
 // import Strimage from "../../public/strength.png"
+
+import  Story from "../../public/ourstrength/story1.jpg"
+import  Story2 from "../../public/ourstrength/story2.jpg"
+import  Story3 from "../../public/ourstrength/story3.jpg"
 
 
 import SarojYadav from "../../public/students/sarojYadv.jpeg"
@@ -231,7 +235,7 @@ const Main = () => {
     viewport={{ once: false }}
     transition={{ duration: 0.6 }}
       >
-        Training
+        Trainings
       </motion.h1>
 
       <div className="flex flex-wrap justify-center gap-6">
@@ -251,28 +255,56 @@ const Main = () => {
       </div>
      
       <section className="mt-14 relative py-16 bg-gradient-to-r from-blue-500 to-blue-900 text-white rounded-2xl">
-      <div className="container mx-auto px-6">
-        <motion.h2
-          className="text-4xl font-bold mb-6 text-center"
-          initial={{ opacity: 0, y: -20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: false }}
-    transition={{ duration: 0.6 }}
-        >
-          Our Strength, Our Assets
-        </motion.h2>
+  <div className="container mx-auto px-6">
+    {/* Section Title */}
+    <motion.h2
+      className="text-4xl font-bold mb-10 text-center"
+      initial={{ opacity: 0, y: -20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false }}
+      transition={{ duration: 0.6 }}
+    >
+      Our Strength, Our Assets
+    </motion.h2>
 
-        <motion.div
-          className="bg-[#004aad] p-6 rounded-lg shadow-xl text-center transform transition-all duration-500"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6, duration: 0.6 }}
-        >
-          <p className="text-lg text-center text-white">{textArray[textIndex]}</p>
-          {/* <Image src={Strimage } height={300} width={800} alt="image" className="relative sm:left-40"/> */}
-        </motion.div>
-      </div>
-    </section>
+    {/* Grid Layout */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Image 1 */}
+      <motion.div
+        className="  rounded-lg flex flex-col items-center justify-center text-center"
+        whileHover={{ scale: 1.05 }}
+        transition={{ duration: 0.3 }}
+      >
+        <Image src={Story2} alt="Experienced Faculty" className=" rounded-md" />
+        <p className="mt-4 text-lg">Experienced and Dedicated Faculty</p>
+      </motion.div>
+
+      {/* Image 2 */}
+      <motion.div
+        className="  rounded-lg flex flex-col items-center justify-center text-center"
+        whileHover={{ scale: 1.05 }}
+        transition={{ duration: 0.3 }}
+      >
+        <Image src={Story} alt="Line Academy" className="rounded-md" />
+        <p className="mt-4 text-lg">State-of-the-Art Facilities</p>
+      </motion.div>
+
+      {/* Image 3 */}
+      <motion.div
+        className="  rounded-lg flex flex-col items-center justify-center text-center"
+        whileHover={{ scale: 1.05 }}
+        transition={{ duration: 0.3 }}
+      >
+        <Image src={Story3} alt="Experienced Faculty" className=" rounded-md" />
+        <p className="mt-4 text-lg">10K+ Experienced Classes</p>
+      </motion.div>
+
+     
+     
+    </div>
+  </div>
+</section>
+
     
   
 
