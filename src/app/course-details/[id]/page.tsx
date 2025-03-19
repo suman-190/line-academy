@@ -63,7 +63,8 @@ const data = [
     description:
       "Our specialized NEC License Preparation Classes are designed to help engineering graduates excel in the NEC license examination and achieve their professional goals. This comprehensive course provides in-depth guidance, focusing on the core concepts and practical knowledge required for the exam.",
      
-    img:LCom
+    img:LCom,
+    syllabusUrl:syllabusUrl
     },
   {
     id: "civil-engineering",
