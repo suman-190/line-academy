@@ -208,11 +208,11 @@ const AboutPage = () => {
           <h3 className="text-xl font-bold text-blue-900">Modern, Technology-Enhanced Classrooms</h3>
           <p className="text-gray-700">Our classrooms are meticulously designed to create an engaging and productive learning environment. Equipped with state-of-the-art technology, including high-resolution projectors, high-speed internet, and interactive Smart boards, we provide students with the tools they need to enhance their learning experience. Comfortable seating arrangements, ample lighting, and well-ventilated spaces contribute to a conducive atmosphere for focused study. Our commitment to modern education ensures that students have access to digital resources, collaborative learning tools, and an immersive academic setting that fosters creativity, innovation, and critical thinking.</p>
         </motion.div>
-        <Image   src={ClassRommImg2} alt="Classroom" width={600} height={100}  className=" rounded-lg shadow-lg" />
+        <Image   src={ClassRommImg2} alt="Classroom" width={600} height={100}  className=" rounded-lg shadow-lg h-80 w-2xl " />
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
-      <Image   src={FacuiltyImg} alt="Classroom" width={600} height={100}  className=" rounded-lg shadow-lg" />
+      <Image   src={FacuiltyImg} alt="Classroom" width={600} height={100}  className=" rounded-lg shadow-lg " />
         <motion.div variants={textVariants} initial="hidden" animate="visible" className="space-y-4">
           <h3 className="text-xl font-bold text-blue-900">Experienced and Skilled Faculty</h3>
           <p className="text-gray-700">Our faculty members are highly experienced professionals who bring a wealth of knowledge and real-world expertise to the classroom. With diverse academic backgrounds and industry experience, they bridge the gap between theory and practical application, ensuring students gain valuable insights. They are dedicated to fostering a supportive, interactive, and engaging learning environment where students feel encouraged to ask questions, explore new ideas, and develop critical thinking skills. Their passion for teaching and mentorship helps students excel academically and prepares them for successful careers.</p>
@@ -224,7 +224,7 @@ const AboutPage = () => {
           <h3 className="text-xl font-bold text-blue-900">Dedicated Student Support Services</h3>
           <p className="text-gray-700">We offer a range of comprehensive support services designed to ensure student success both inside and outside the classroom. Our academic counseling services provide personalized guidance to help students navigate their educational journey, while career guidance helps them plan for successful professional futures. Additionally, we offer mental health resources to promote emotional well-being and resilience. Our dedicated team is committed to supporting students every step of the way, ensuring they have the tools, guidance, and care they need to thrive in all aspects of their lives.</p>
         </motion.div>
-        <Image   src={ClassRommImg} alt="Classroom" width={600} height={100}  className=" rounded-lg shadow-lg" />
+        <Image   src={ClassRommImg} alt="Classroom"    className=" rounded-lg shadow-lg h-80 w-2xl  " />
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">

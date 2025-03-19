@@ -1,11 +1,20 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import HeroIcon from "../../public/Hero.png";
-import FrontImg4 from "../../public/forntImg2/1.png"
+import HeroIcon from "../../public/forntImg2/abha.png";
+import FrontImg4 from "../../public/forntImg2/sujita.png"
 import FrontImg3 from "../../public/forntImg2/front1.jpg"
 import FrontImg2 from "../../public/forntImg2/front2.jpg"
 import { Typewriter } from "react-simple-typewriter";
+
+
+import { Oswald } from "next/font/google";
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"], // Choose font weights as needed
+});
+
 
 const imageVariants = (delay) => ({
   hidden: { scale: 0.2, opacity: 0 },
@@ -22,7 +31,10 @@ const Hero = () => {
       {/* Left Side - Heading and Text */}
       <div className="p-4 sm:p-2 w-full sm:w-2xl">
         <h1 className= " font-medium text-xl  sm:text-5xl ">
-          <p>Learn With Line Academy</p>
+        <p className={`${oswald.className} text-5xl font-bold`}>
+      Learn With Line Academy
+    </p>
+          
            <p className="text-blue-800"><Typewriter
             words={['Affordable','Intutive',"Practical" ]}
             loop={50}

@@ -503,7 +503,7 @@ const data = [
   },
   {
     id: "engineering-training",
-    subject: "Engineering-Trai",
+    subject: "Engineering Training",
     exams: "MSC Entrance Preparation",
     duration: "3 months",
     mode: "Both, On-site And Online",
@@ -516,6 +516,7 @@ const data = [
 
 export default function CivilEngineeringPage() {
   const params = useParams();  
+  console.log()
   const [course, setCourse] = useState<any>(null);
 
   useEffect(() => {
@@ -555,7 +556,9 @@ export default function CivilEngineeringPage() {
         View Syllabus
       </button>
     </a>
-            <button className="bg-gray-700 text-white px-4 py-2 rounded-md hover:bg-gray-800 transition">OLD QUESTIONS</button>
+    <Link href="/register">
+            <button className="bg-gray-700 text-white px-4 py-2 rounded-md hover:bg-gray-800 transition">Request a brochure</button>
+            </Link>
             <Link href="/register">
               <button className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition">ENROLL NOW</button>
             </Link>

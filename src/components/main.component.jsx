@@ -4,6 +4,8 @@ import { useRef,useEffect,useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { Oswald } from "next/font/google";
+
 import BE1 from "../../public/B.E. coaching universities/1.png";
 import BE2 from "../../public/B.E. coaching universities/2.png";
 import BE3 from "../../public/B.E. coaching universities/3.png";
@@ -34,6 +36,13 @@ import  Story3 from "../../public/ourstrength/story3.jpg"
 import SarojYadav from "../../public/students/sarojYadv.jpeg"
 import RiyaBhattari from "../../public/students/RIyaBhttarai.jpeg"
 import PrabeshPokharel  from "../../public/students/PrabeshPokharel.jpeg"
+
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"], // Choose font weights as needed
+});
+
 
 // const images = [BE1, BE2, BE3, BE4];
 const images=[
@@ -105,10 +114,7 @@ const trainingImages = [
   href:"professional-training",
   img:Tr3
 },
-{
-  href:"management-training",
-  img:Tr3
-},
+
 ];
 
 const Main = () => {
@@ -156,7 +162,7 @@ const Main = () => {
   return (
     <main ref={sectionRef} className="mt-10 flex flex-col items-center justify-center w-full ">
       <motion.h1
-        className="text-[#004aad] text-3xl font-bold mb-6"
+        className={`${oswald.className} text-[#004aad] text-3xl font-bold mb-6`}
         initial={{ opacity: 0, y: -20 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: false }}
@@ -181,7 +187,7 @@ const Main = () => {
       </div>
 
       <motion.h1
-        className="text-[#004aad] text-3xl font-bold mb-6 mt-10"
+       className={`${oswald.className} text-[#004aad] text-3xl font-bold mb-6 mt-12`}
         initial={{ opacity: 0, y: -20 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: false }}
@@ -229,7 +235,7 @@ const Main = () => {
       </div>
 
       <motion.h1
-        className="text-[#004aad] text-3xl font-bold mb-6 mt-20"
+       className={`${oswald.className} text-[#004aad] text-3xl font-bold mb-6 mt-12`}
         initial={{ opacity: 0, y: -20 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: false }}

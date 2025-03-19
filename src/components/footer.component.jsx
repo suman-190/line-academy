@@ -48,16 +48,16 @@ const Footer = () => {
             <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <p>Line Academy</p>
-            <p>01-5445555</p>
+            <p>01-5445555/+977-9763604776</p>
             <p>info.lineacademy@gmail.com</p>
             <p>Jal Vinayak Marg, Pulchowk, Lalitpur-20</p>
             </div>
             <div className="flex gap-1">
-            <Link href={"./"}><FaFacebookSquare/></Link>
-            <Link href={"./"}><FaInstagramSquare/></Link>
-            <Link href={"./"}><FaLinkedin/></Link>
+            <Link href={"https://www.facebook.com/profile.php?id=61561659924899"} target="_blank"><FaFacebookSquare/></Link>
+            <Link href={"https://www.instagram.com/lineacademy.edu.np/"} target="_blank"><FaInstagramSquare/></Link>
+            <Link href={"https://www.linkedin.com/company/line-academy-la"} target="_blank"><FaLinkedin/></Link>
             <Link href={"./"}><FaWhatsappSquare/></Link>
-            <Link href={"./"}><FaTiktok/></Link>
+            <Link href={"https://www.tiktok.com/@lineacademy_"} target="_blank"><FaTiktok/></Link>
 
             </div>
 
