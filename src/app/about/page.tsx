@@ -9,9 +9,9 @@ import SujitaImg from "../../../public/OurTeams/sujita.png"
 import DavidImg from "../../../public/OurTeams/David.png"
 import AnupImg from "../../../public/OurTeams/Anup.png"
 
-import ClassRommImg from "../../../public/ourFacilities/classroom.png"
-import FacuiltyImg from "../../../public/ourFacilities/facuilty.jpg"
-import ClassRommImg2 from "../../../public/ourFacilities/classroom2.png"
+import ClassRommImg2 from "../../../public/ourFacilities/mordenClassromm.jpeg"
+import FacuiltyImg from "../../../public/ourFacilities/ExperienceAndSkill.jpeg"
+import ClassRommImg from "../../../public/ourFacilities/supportive system.jpeg"
 import InterShipImg from "../../../public/ourFacilities/internshipImages.jpg"
 
 const AboutPage = () => {

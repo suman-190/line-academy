@@ -28,9 +28,9 @@ import Tr3 from "../../public/Training_category/Professional training.png";
 
 // import Strimage from "../../public/strength.png"
 
-import  Story from "../../public/ourstrength/story1.jpg"
-import  Story2 from "../../public/ourstrength/story2.jpg"
-import  Story3 from "../../public/ourstrength/story3.jpg"
+import  Story from "../../public/ourstrength/wellStructured.jpeg"
+import  Story2 from "../../public/ourstrength/story2.jpeg"
+import  Story3 from "../../public/ourstrength/claess10plus.jpeg"
 
 
 import SarojYadav from "../../public/students/sarojYadv.jpeg"
@@ -168,7 +168,7 @@ const Main = () => {
     viewport={{ once: false }}
     transition={{ duration: 0.6 }}
       >
-        B.E Coaching Classes
+        B.E. Coaching Classes
       </motion.h1>
       <div className="flex flex-wrap justify-center gap-6">
         {images.map(({img,href}, index) => (
@@ -193,7 +193,7 @@ const Main = () => {
     viewport={{ once: false }}
     transition={{ duration: 0.6 }}
       >
-        NEC License Preparation Classes
+        N.E.C License Preparation Classes
       </motion.h1>
 
       <div className="flex flex-wrap justify-center gap-6">

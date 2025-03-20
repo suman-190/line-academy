@@ -67,8 +67,8 @@ const subjects = {
       { name: "Subject 3", imgUrl: FMC13 },
       { name: "Subject 3", imgUrl: FMC14 },
       { name: "Subject 3", imgUrl: FMC16 },
-      { name: "Subject 3", imgUrl: FMC17 },
-      { name: "Subject 3", imgUrl: FMC18 },
+     
+     
       { name: "Subject 3", imgUrl: FMC19 },
       { name: "Subject 3", imgUrl: FMC20 },
       { name: "Subject 3", imgUrl: FMC21 },
@@ -93,13 +93,12 @@ const subjects = {
       { name: "Subject C", imgUrl: FMCcom10 },
       { name: "Subject C", imgUrl: FMCcom11 },
       { name: "Subject C", imgUrl: FMCcom12 },
-      { name: "Subject C", imgUrl: FMCcom13 },
-      { name: "Subject C", imgUrl: FMCcom14 },
+      
       { name: "Subject C", imgUrl: FMCcom18 },
       { name: "Subject C", imgUrl: FMCcom19 },
       { name: "Subject C", imgUrl: FMCcom20 },
       { name: "Subject C", imgUrl: FMCcom21 },
-      { name: "Subject C", imgUrl: FMCcom22 },
+      
       
     ],
   };
@@ -136,13 +135,13 @@ const subjects = {
         </div>
   
         {/* Subject Cards */}
-        <div className="grid grid-cols-3 sm:grid-cols-6 gap-6 ">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 ">
           {subjects[selectedFaculty].map((subject, index) => (
             <div
               key={index}
               className="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl p-2 border border-blue-200"
             >
-              <Image src={subject.imgUrl} alt={subject.name} width={150} height={150} />
+              <Image src={subject.imgUrl} alt={subject.name} width={250} height={250} />
               {/* <div className="p-4">
                 <h3 className="text-lg font-semibold">{subject.name}</h3>
               </div> */}

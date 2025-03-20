@@ -64,7 +64,7 @@ const data = [
       "Our specialized NEC License Preparation Classes are designed to help engineering graduates excel in the NEC license examination and achieve their professional goals. This comprehensive course provides in-depth guidance, focusing on the core concepts and practical knowledge required for the exam.",
      
     img:LCom,
-    syllabusUrl:"/syllabus/NComputerEngineeringSyllabus.pdf"
+    syllabusUrl:syllabusUrl
     },
   {
     id: "civil-engineering",
@@ -74,8 +74,7 @@ const data = [
     mode: "Both, On-site And Online",
     description:
       "Our specialized NEC License Preparation Classes are designed to help engineering graduates excel in the NEC license examination and achieve their professional goals. This comprehensive course provides in-depth guidance, focusing on the core concepts and practical knowledge required for the exam.",
-    img:LCivil,
-    syllabusUrl:"/syllabus/civilEngineeringSyllabus.pdf"
+    img:LCivil
     },
   {
     id: "mechanical-engineering",
@@ -85,8 +84,7 @@ const data = [
     mode: "Both, On-site And Online",
     description:
       "Our specialized NEC License Preparation Classes are designed to help engineering graduates excel in the NEC license examination and achieve their professional goals. This comprehensive course provides in-depth guidance, focusing on the core concepts and practical knowledge required for the exam.",
-  img:LMec,
-   syllabusUrl:"/syllabus/mechanicalEngineeringSyllabus.pdf"
+  img:LMec
     },
   {
     id: "electrical-electronics-engineering",
@@ -96,8 +94,7 @@ const data = [
     mode: "Both, On-site And Online",
     description:
       "Our specialized NEC License Preparation Classes are designed to help engineering graduates excel in the NEC license examination and achieve their professional goals. This comprehensive course provides in-depth guidance, focusing on the core concepts and practical knowledge required for the exam.",
-    img:LEle_Electronics,
-     syllabusUrl:"/syllabus/electricalAndElectronicEngineering.pdf"
+    img:LEle_Electronics
     },
     {
       id: "electronic-communication-and-information-engineering",
@@ -107,8 +104,7 @@ const data = [
       mode: "Both, On-site And Online",
       description:
         "Our specialized NEC License Preparation Classes are designed to help engineering graduates excel in the NEC license examination and achieve their professional goals. This comprehensive course provides in-depth guidance, focusing on the core concepts and practical knowledge required for the exam.",
-      img:LEle_comu_info,
-       syllabusUrl:"/syllabus/ElectronicsAndCommunicationEngineering.pdf"
+      img:LEle_comu_info
       },
       {
         id:"electronics-communication-engineering",
@@ -118,8 +114,7 @@ const data = [
         mode: "Both, On-site And Online",
         description:
           "Our specialized NEC License Preparation Classes are designed to help engineering graduates excel in the NEC license examination and achieve their professional goals. This comprehensive course provides in-depth guidance, focusing on the core concepts and practical knowledge required for the exam.",
-          img:LEle_commu,
-          syllabusUrl:"/syllabus/ElectronicsAndCommunicationEngineering.pdf"
+          img:LEle_commu
 
       },
       {
@@ -130,8 +125,7 @@ const data = [
         mode: "Both, On-site And Online",
         description:
           "Our specialized NEC License Preparation Classes are designed to help engineering graduates excel in the NEC license examination and achieve their professional goals. This comprehensive course provides in-depth guidance, focusing on the core concepts and practical knowledge required for the exam.",
-        img:LEle_Electronics,
-        syllabusUrl:"/syllabus/ElectronicsAndCommunicationEngineering.pdf"
+        img:LEle_Electronics
         },
         {
           id:"information-technology-engineering",
@@ -152,8 +146,7 @@ const data = [
     mode: "Both, On-site And Online",
     description:
       "Our specialized NEC License Preparation Classes are designed to help engineering graduates excel in the NEC license examination and achieve their professional goals. This comprehensive course provides in-depth guidance, focusing on the core concepts and practical knowledge required for the exam.",
-    img:LArch,
-    syllabusUrl:"/syllabus/architectureEngieering.pdf"
+    img:LArch
     },
   
   {
@@ -164,8 +157,7 @@ const data = [
     mode: "Both, On-site And Online",
     description:
       "Our specialized NEC License Preparation Classes are designed to help engineering graduates excel in the NEC license examination and achieve their professional goals. This comprehensive course provides in-depth guidance, focusing on the core concepts and practical knowledge required for the exam.",
-    img:LInfo,
-    syllabusUrl:"/syllabus/informationTechnologyEngineering.pdf"
+    img:LInfo
     },
     {
       id: "elctrical-engineering",
@@ -175,8 +167,7 @@ const data = [
       mode: "Both, On-site And Online",
       description:
         "Our specialized NEC License Preparation Classes are designed to help engineering graduates excel in the NEC license examination and achieve their professional goals. This comprehensive course provides in-depth guidance, focusing on the core concepts and practical knowledge required for the exam.",
-      img:LEle,
-      syllabusUrl:"/syllabus/ElectricalEngineering.pdf"
+      img:LEle
       },
 
   // B.E Coaching
@@ -421,8 +412,7 @@ const data = [
     description:
       "Specialized training for NEA Electrical Engineer Level 7 government exam with expert guidance.",
      
-    img:LokEE7,
-    syllabusUrl:"/syllabus/ElectricalEngineerLevel7.pdf"
+    img:LokEE7
     },
   {
     id: "nea-electrical-supervisor-level-5",
@@ -432,8 +422,7 @@ const data = [
     mode: "Both, On-site And Online",
     description:
       "Specialized training for NEA - Electrical Supervisor Level 5 government exam with expert guidance.",
-      img:LokEE5,
-      syllabusUrl:"/syllabus/ELECTRICALLEVEL5.pdf"
+      img:LokEE5
     },
   {
     id:"nea-civil-engineer-level-7",
@@ -453,8 +442,7 @@ const data = [
     mode: "Both, On-site And Online",
     description:
       "Get ready for the Computer Engineer / Computer Officer government examination with targeted preparation classes.",
-    img:LokCECO,
-    syllabusUrl:"/syllabus/ComputerOfficerSyllabus(1).pdf"
+    img:LokCECO
     },
   {
     id: "computer-operator",
@@ -464,8 +452,7 @@ const data = [
     mode: "Online",
     description:
       "Preparation course for the Computer Operator government exam, covering all necessary topics and skills.",
-    img:LokOpe,
-    syllabusUrl:"/syllabus/computerEngineerSyllabus.pdf"
+    img:LokOpe
     },
   {
     "id": "nea-computer-engineer-level-7",
@@ -475,8 +462,7 @@ const data = [
     "mode": "Both, On-site And Online",
    
     "description": "Prepare for the NEA Computer Engineer Level 7 government exam with targeted preparation",
-    img:LokCE,
-    syllabusUrl:"/syllabus/computerEngineerSyllabus.pdf"
+    img:LokCE
   },
 
   // MSC Entrance Preparation
@@ -566,14 +552,11 @@ export default function CivilEngineeringPage() {
 
           {/* Buttons */}
           <div className="flex gap-4">
-          <a href={course.syllabusUrl} target="_blank" rel="noopener noreferrer">
-      <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700">
-        View Syllabus
-      </button>
+          <a href={syllabusUrl} target="_blank" rel="noopener noreferrer">
+      
     </a>
-    
     <Link href="/register">
-            <button className="bg-gray-700 text-white px-4 py-2 rounded-md hover:bg-gray-800 transition">Old Questions</button>
+            <button className="bg-gray-700 text-white px-4 py-2 rounded-md hover:bg-gray-800 transition">Request a brochure</button>
             </Link>
             <Link href="/register">
               <button className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition">ENROLL NOW</button>

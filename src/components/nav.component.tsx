@@ -232,13 +232,15 @@ const [screentWidth,setScreenWidth]=useState(0)
               .find((category) => category.title === selectedCategory)
               ?.exams.map(({ name, id }) => (
                 <Link
-                  href={
-                    selectedCategory === "B.E Coaching"
-                      ? `/be-coaching/${id}`
-                      : `/course-details/${id}`
-                  }
-                  key={name}
-                >
+  href={
+    selectedCategory === "B.E Coaching"
+      ? `/be-coaching/${id}`
+      : selectedCategory === "Trainings"
+      ? `/training-details/${id}` // Assuming you want a separate route for Trainings
+      : `/course-details/${id}`
+  }
+  key={name}
+>
                 <li className="p-2 rounded shadow hover:shadow-xl border-2 border-transparent hover:border-gray-300 transition-all duration-300 cursor-pointer">
   {name}
 </li>
