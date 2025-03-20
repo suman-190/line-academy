@@ -95,7 +95,7 @@ const subjects = {
       { name: "Subject C", imgUrl: FMCcom12 },
       
       { name: "Subject C", imgUrl: FMCcom18 },
-      { name: "Subject C", imgUrl: FMCcom19 },
+      // { name: "Subject C", imgUrl: FMCcom19 },
       { name: "Subject C", imgUrl: FMCcom20 },
       { name: "Subject C", imgUrl: FMCcom21 },
       
