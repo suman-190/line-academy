@@ -548,21 +548,21 @@ export default function CivilEngineeringPage() {
 
   return (
     <div className=" bg-blue-900 flex  justify-center p-6">
-      <div className="bg-white rounded-lg p-6 sm:p-10 w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="bg-[#004aad] pb-8 text-white rounded-lg p-6 sm:p-10 w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Left Side: Course Details */}
-        <div className="space-y-6 text-black">
-          <h2 className="text-sm text-black">
+        <div className="space-y-6 text-white">
+          <h2 className="text-sm text-white">
             <span className="text-black">Home</span> / {course.subject} ({course.id})
           </h2>
-          <h1 className="text-3xl sm:text-4xl font-bold text-black">{course.subject} </h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-white">{course.subject} </h1>
 
-          <div className="flex items-center gap-4 text-black">
+          <div className="flex items-center gap-4 text-white">
             <p className="flex items-center gap-2"><FaClock /> {course.duration}</p>
             <p className="flex items-center gap-2"><FaGraduationCap /> {course.exams}</p>
             <p className="flex items-center gap-2"><FaGlobe /> {course.mode}</p>
           </div>
 
-          <p className="text-black">{course.description}</p>
+          <p className="text-white">{course.description}</p>
 
           {/* Buttons */}
           <div className="flex gap-4">

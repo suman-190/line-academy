@@ -53,11 +53,10 @@ const Footer = () => {
             <p>Jal Vinayak Marg, Pulchowk, Lalitpur-20</p>
             </div>
             <div className="flex gap-1">
-            <Link href={"https://www.facebook.com/profile.php?id=61561659924899"} target="_blank"><FaFacebookSquare/></Link>
-            <Link href={"https://www.instagram.com/lineacademy.edu.np/"} target="_blank"><FaInstagramSquare/></Link>
-            <Link href={"https://www.linkedin.com/company/line-academy-la"} target="_blank"><FaLinkedin/></Link>
-            <Link href={"./"}><FaWhatsappSquare/></Link>
-            <Link href={"https://www.tiktok.com/@lineacademy_"} target="_blank"><FaTiktok/></Link>
+            <Link href={"https://www.facebook.com/profile.php?id=61567545773869"} target="_blank" className="p-2 border border-amber-300"><FaFacebookSquare/ ></Link>
+            <Link href={"https://www.instagram.com/lineacademy.edu.np/"} target="_blank" className="p-2 border border-amber-300" ><FaInstagramSquare/></Link>
+            <Link href={"https://www.linkedin.com/company/line-academy-la"} target="_blank" className="p-2 border border-amber-300"><FaLinkedin/></Link>
+            <Link href={"https://www.tiktok.com/@lineacademy_"} target="_blank" className="p-2 border border-amber-300"><FaTiktok/></Link>
 
             </div>
 

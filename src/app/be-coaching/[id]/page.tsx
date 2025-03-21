@@ -65,7 +65,7 @@ const subjects = {
       { name: "Subject 3", imgUrl: TheoryOfStructureI },
       { name: "Subject 3", imgUrl: TheoryOfStructureII },
       { name: "Subject 3", imgUrl: FMC13 },
-      { name: "Subject 3", imgUrl: FMC14 },
+      
       { name: "Subject 3", imgUrl: FMC16 },
      
      
@@ -109,7 +109,7 @@ const subjects = {
     );
   
     return (
-      <div className="flex flex-col items-center mt-30">
+      <div className="flex flex-col items-center mt-30 bg-[#004aad] pb-8 text-white pt-3">
         {/* Buttons for Faculty Selection */}
         <div className="flex gap-4 mb-5">
           <button

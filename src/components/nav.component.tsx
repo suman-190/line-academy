@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { GoChevronRight } from "react-icons/go";
 
-import Logo from "../../public/Logo-white.png"
+import Logo from "../../public/logo2.png"
 
 type props= {
   className?:string
@@ -165,7 +165,7 @@ const [screentWidth,setScreenWidth]=useState(0)
     <div className={`fixed w-full  bg-white shadow-md transition-transform duration-700 ease-in-out transform ${showNav ? "translate-y-0" : "-translate-y-full"} z-50 ${showNav ? "top-0" : "-top-full"}`}> 
     
       <motion.div
-        className="bg-[#004aad] px-4     py-2 min-h-16 w-full sm:flex items-center justify-center transition-transform duration-500 "
+        className=" bg-white px-4     py-2 min-h-16 w-full sm:flex items-center justify-center transition-transform duration-500 "
         
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -184,7 +184,7 @@ const [screentWidth,setScreenWidth]=useState(0)
         >
           {/* Dropdown Button */}
           <button
-            className="px-1  sm:px-4 sm:py-2  border border-white text-white rounded-md w-34 lg:w-auto"
+            className="px-1  sm:px-4 sm:py-2  border border-blue text-blue-700 rounded-md w-34 lg:w-auto"
             onMouseEnter={() => setOpenMenu(true)}
           >
             <span>All Courses</span> <span  className="relative top-0.5 ">▼</span>
@@ -263,8 +263,8 @@ const [screentWidth,setScreenWidth]=useState(0)
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className=" sm:px-4 sm:py-2 rounded-lg text-white bg-transparent transition-all duration-300 ease-in-out 
-              hover:bg-white hover:text-black hover:shadow-lg"
+            className=" sm:px-4 sm:py-2 rounded-lg text-blue-800 bg-transparent transition-all duration-300 ease-in-out 
+              hover:bg-blue-700 hover:text-white hover:shadow-lg"
           >
             {name}
           </motion.li>
@@ -275,7 +275,7 @@ const [screentWidth,setScreenWidth]=useState(0)
       </div>
 
         <motion.ul
-          className="flex items-center gap-2 text-white  cursor-pointer"
+          className="flex items-center gap-2 text-blue-700  cursor-pointer"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -284,8 +284,8 @@ const [screentWidth,setScreenWidth]=useState(0)
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-             className="sm:px-4 sm:py-2 rounded-lg text-white bg-transparent transition-all duration-300 ease-in-out 
-              hover:bg-white hover:text-black hover:shadow-lg"
+             className="sm:px-4 sm:py-2 rounded-lg  bg-transparent transition-all duration-300 ease-in-out 
+              hover:bg-blue-700 hover:text-white hover:shadow-lg"
           >
             <Link href="/login">Login</Link>
           </motion.li>
@@ -293,8 +293,8 @@ const [screentWidth,setScreenWidth]=useState(0)
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-             className="sm:px-4 sm:py-2 rounded-lg text-white bg-transparent transition-all duration-300 ease-in-out 
-              hover:bg-white hover:text-black hover:shadow-lg"
+             className="sm:px-4 sm:py-2 rounded-lg  bg-transparent transition-all duration-300 ease-in-out 
+              hover:bg-blue-700 hover:text-white hover:shadow-lg"
           >
             <Link href="/register">Register</Link>
           </motion.li>

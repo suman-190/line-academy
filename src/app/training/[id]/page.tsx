@@ -85,7 +85,7 @@ const traingData=[
       }
       , {
         id: "professional-training",
-        subject: "Engineering Training",
+        subject: "Professional Training",
         details:[{
             hrf:"primavera",
             img:Primavera
@@ -162,13 +162,13 @@ const TrainingDetails = ()=>{
         return <div className="mt-10">Course Not Found</div>;
       }
     return (
-        <div className=" text-blue-600 flex justify-center">
+        <div className="  flex justify-center mt-30 bg-[#004aad] pb-8 text-white">
             <div className="flex flex-col gap-5">
               <h1 className="font-bold text-center text-2xl">{course.subject}</h1>
-              <div className="flex gap-3 flex-wrap justify-center">
+              <div className="grid grid-cols-2 sm:grid-cols-4  gap-3 flex-wrap justify-center">
               {course.details.map(({hrf,img}:{hrf:any,img:string},index:number)=>{
-                return( <Link href={`/course-details/${hrf}`} key={index} className="border border-amber-200 p-2 rounded-2xl">
-                <Image src={img} alt="img" height={150} width={150} className="rounded-xl"/>
+                return( <Link href={`/course-details/${hrf}`} key={index} className="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl p-2 border border-blue-200">
+                <Image src={img} alt="img" height={200} width={200} className="rounded-xl"/>
                 </Link>)
               })}
               </div>

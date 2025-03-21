@@ -383,7 +383,7 @@ const Main = () => {
 
 
 
-    <section className="relative py-16 bg-gradient-to-r from-[#004aad] to-blue-400 text-white mt-8 rounded-[1%_4%_2%_2%]">
+    <section className="relative py-22 px-10 bg-gradient-to-r from-[#004aad] to-blue-400 text-white mt-8 rounded-[1%_4%_2%_2%]">
       <div className="container mx-auto px-6">
         <motion.h2
           className="text-4xl font-bold mb-6 text-center"
@@ -394,7 +394,7 @@ const Main = () => {
           What Our Students Say
         </motion.h2>
 
-        <div className="flex flex-wrap justify-center gap-8 animate-move">
+        <div className="flex flex-wrap justify-center gap-8 animate-move mt-4">
          
 
         <motion.div
@@ -412,7 +412,7 @@ const Main = () => {
             </p>
             </div>
           </motion.div>
-          <motion.div
+          {/* <motion.div
             className="bg-white p-6 rounded-3xl shadow-md w-72 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:animate-none"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -426,7 +426,7 @@ const Main = () => {
               Line Academy is situated in a prime, easily accessible area of the city, ensuring students and staff are close to key business and commercial hubs.
             </p>
             </div>
-          </motion.div>
+          </motion.div> */}
           <motion.div
             className="bg-white p-6 rounded-3xl shadow-md w-72 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:animate-none"
             initial={{ opacity: 0, x: -50 }}
